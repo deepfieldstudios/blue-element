@@ -1,0 +1,30 @@
+/* ============================================================
+   BLUE ELEMENT — SPACING & SIZING
+   Calm, generous spacing. 4px base unit.
+   ============================================================ */
+
+:root {
+  --be-space-0:  0;
+  --be-space-1:  4px;
+  --be-space-2:  8px;
+  --be-space-3:  12px;
+  --be-space-4:  16px;
+  --be-space-5:  20px;
+  --be-space-6:  24px;
+  --be-space-8:  32px;
+  --be-space-10: 40px;
+  --be-space-12: 48px;
+  --be-space-16: 64px;
+  --be-space-20: 80px;
+  --be-space-24: 96px;
+  --be-space-32: 128px;
+
+  /* Semantic spacing */
+  --be-gutter:        var(--be-space-6);  /* default gap */
+  --be-panel-pad:     var(--be-space-8);  /* inside translucent panels */
+  --be-section-pad:   var(--be-space-20); /* section breathing room */
+
+  /* Content widths */
+  --be-measure:       62ch;   /* comfortable body measure */
+  --be-content-max:   1200px;
+}

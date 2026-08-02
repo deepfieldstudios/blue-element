@@ -1,0 +1,17 @@
+/* ============================================================
+   BLUE ELEMENT — WEBFONTS
+
+   The brand's licensed families live in the Canva brand kit and
+   were NOT supplied as files. These Google Fonts are the nearest
+   public matches and are loaded remotely:
+
+     Playfair Display  ≈ high-contrast display serif (Bodoni-ish)
+     Anton             ≈ heavy condensed impact sans
+     Montserrat        ≈ clean geometric body sans
+
+   ACTION FOR USER: drop the real .ttf/.woff2 files in
+   assets/fonts/ and replace these @imports with local
+   @font-face rules to match the Canva kit exactly.
+   ============================================================ */
+
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,600&family=Anton&family=Oswald:wght@300;400;500;600;700&family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&display=swap");

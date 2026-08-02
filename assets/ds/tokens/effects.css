@@ -1,0 +1,42 @@
+/* ============================================================
+   BLUE ELEMENT — EFFECTS
+   Radii, shadows, blur. Soft, rounded, calm — the signature is
+   the translucent navy rounded panel floated over photography.
+   ============================================================ */
+
+:root {
+  /* ---- Corner radii ---- */
+  --be-radius-xs:   6px;
+  --be-radius-sm:   10px;
+  --be-radius-md:   16px;   /* default panel / card */
+  --be-radius-lg:   24px;   /* large hero panels */
+  --be-radius-xl:   32px;
+  --be-radius-pill: 999px;  /* buttons, chips */
+  --be-radius-circle: 50%;
+
+  /* ---- Shadows ---- */
+  /* Diffuse, deep-water shadows — cool navy, never neutral grey */
+  --be-shadow-sm:  0 2px 8px rgba(2, 27, 46, 0.18);
+  --be-shadow-md:  0 10px 30px rgba(2, 27, 46, 0.28);
+  --be-shadow-lg:  0 24px 60px rgba(2, 27, 46, 0.38);
+  /* Panel floating over a photo */
+  --be-shadow-panel: 0 18px 50px rgba(0, 0, 0, 0.40);
+  /* Inset sheen for glassy translucent panels */
+  --be-inset-sheen: inset 0 1px 0 rgba(255, 255, 255, 0.12);
+
+  /* ---- Blur (glass over photography) ---- */
+  --be-blur-panel: 14px;
+  --be-blur-soft:  6px;
+
+  /* ---- Borders ---- */
+  --be-border-w:   1px;
+  --be-border-w-2: 2px;
+
+  /* ---- Motion ---- */
+  /* Slow, weightless, like sinking — never bouncy */
+  --be-ease:       cubic-bezier(0.22, 0.61, 0.36, 1); /* @kind other */
+  --be-ease-out:   cubic-bezier(0.16, 1, 0.3, 1); /* @kind other */
+  --be-dur-fast:   160ms; /* @kind other */
+  --be-dur:        320ms; /* @kind other */
+  --be-dur-slow:   600ms; /* @kind other */
+}

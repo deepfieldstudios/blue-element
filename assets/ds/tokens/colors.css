@@ -1,0 +1,86 @@
+/* ============================================================
+   BLUE ELEMENT — COLOR TOKENS
+   Lead with ocean blues + teal accent; ground in navy/black/
+   forest; switch to the earth set for island/land/culture.
+   ============================================================ */
+
+:root {
+  /* ---- Ocean core (primary palette) ---- */
+  --be-ocean-blue: #044f7d;   /* Deep Ocean Blue — primary */
+  --be-teal:       #207d92;   /* Teal — signature accent, from the logo */
+  --be-steel-navy: #204b66;   /* Steel Navy — panels / backgrounds */
+  --be-sky-blue:   #b2cfd8;   /* Sky Blue — light bg, soft text on dark */
+
+  /* ---- Anchors ---- */
+  --be-forest:     #183a29;   /* Forest Green */
+  --be-black:      #000000;   /* Black — text / anchors */
+  --be-white:      #ffffff;
+
+  /* ---- Depth extension (derived) — surface → abyss ---- */
+  --be-surface-teal: #2a93a8; /* shimmer just under the waterline */
+  --be-deep:         #033c62; /* deeper than primary */
+  --be-abyss:        #021b2e; /* near-black blue, the bottom */
+  --be-ink:          #0a1722; /* darkest panel ink */
+
+  /* ---- Earth set (land / food / community stories) ---- */
+  --be-chartreuse: #939f42;   /* list dots, highlights */
+  --be-olive:      #5a573d;   /* Olive Drab */
+  --be-dark-olive: #2d3811;   /* Dark Olive */
+  --be-sand:       #b1a38b;   /* Sand */
+
+  /* ---- Tints / soft neutrals ---- */
+  --be-sky-50:  #e7eff2;      /* lightest wash */
+  --be-sky-100: #cfe0e6;
+  --be-mist:    #f4f7f8;      /* off-white page */
+
+  /* ============================================================
+     SEMANTIC ALIASES
+     ============================================================ */
+
+  /* Brand roles */
+  --be-primary:       var(--be-ocean-blue);
+  --be-accent:        var(--be-teal);
+  --be-accent-earth:  var(--be-chartreuse);
+
+  /* Page / surface */
+  --be-bg:            var(--be-abyss);     /* default dark canvas */
+  --be-bg-light:      var(--be-mist);      /* light canvas */
+  --be-surface:       var(--be-steel-navy);
+  --be-surface-deep:  var(--be-deep);
+
+  /* Translucent navy panel laid over photography (signature) */
+  --be-panel:         rgba(32, 75, 102, 0.72);
+  --be-panel-strong:  rgba(10, 23, 34, 0.78);
+  --be-panel-light:   rgba(178, 207, 216, 0.16);
+
+  /* Text */
+  --be-text:          var(--be-black);     /* on light */
+  --be-text-soft:     #2f4654;             /* muted on light */
+  --be-text-invert:   var(--be-white);     /* on dark */
+  --be-text-soft-dark: var(--be-sky-blue); /* soft text on dark */
+
+  /* Lines / hairlines */
+  --be-border:        rgba(178, 207, 216, 0.28);
+  --be-border-strong: rgba(178, 207, 216, 0.45);
+  --be-border-ink:    rgba(0, 0, 0, 0.12);
+
+  /* ---- Signature depth gradients ---- */
+  --be-grad-depth: linear-gradient(180deg,
+      var(--be-surface-teal) 0%,
+      var(--be-teal) 22%,
+      var(--be-ocean-blue) 58%,
+      var(--be-abyss) 100%);
+  --be-grad-depth-soft: linear-gradient(180deg,
+      var(--be-teal) 0%,
+      var(--be-deep) 60%,
+      var(--be-abyss) 100%);
+  --be-grad-earth: linear-gradient(180deg,
+      var(--be-sand) 0%,
+      var(--be-olive) 60%,
+      var(--be-dark-olive) 100%);
+  /* Protection gradient — darkens the foot of a photo so text reads */
+  --be-grad-protect: linear-gradient(0deg,
+      rgba(2, 27, 46, 0.92) 0%,
+      rgba(2, 27, 46, 0.55) 28%,
+      rgba(2, 27, 46, 0) 60%); /* @kind color */
+}

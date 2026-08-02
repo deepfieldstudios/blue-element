@@ -1,0 +1,88 @@
+/* ============================================================
+   BLUE ELEMENT — TYPOGRAPHY TOKENS
+
+   Three voices:
+   1. Display serif  — high-contrast, wide letterspaced UPPERCASE
+                       (editorial, laid over photography).
+   2. Impact sans    — heavy condensed, tight all-caps
+                       (prices, banners, big numbers).
+   3. Body sans      — clean geometric; tracked uppercase labels.
+
+   NOTE: Licensed Canva families substituted with nearest
+   Google Fonts. See @import in fonts.css and the flag in
+   readme.md. Swap the families here once licensed files land.
+   ============================================================ */
+
+:root {
+  /* ---- Families ---- */
+  --be-font-display: "Playfair Display", "Bodoni Moda", Georgia, serif;
+  --be-font-impact:  "Anton", "Oswald", "Arial Narrow", sans-serif;
+  --be-font-body:    "Montserrat", "Poppins", system-ui, sans-serif;
+
+  /* ---- Weights ---- */
+  --be-w-regular: 400; /* @kind font */
+  --be-w-medium:  500; /* @kind font */
+  --be-w-semibold: 600; /* @kind font */
+  --be-w-bold:    700; /* @kind font */
+  --be-w-black:   900; /* @kind font */
+
+  /* ---- Tracking (letter-spacing) ---- */
+  --be-track-display: 0.14em;  /* spaced serif caps */
+  --be-track-label:   0.22em;  /* small tracked uppercase labels */
+  --be-track-impact:  0.005em; /* condensed caps, near-tight */
+  --be-track-body:    0.005em;
+
+  /* ---- Line heights ---- */
+  --be-lh-tight:   1.02; /* @kind font */
+  --be-lh-heading: 1.12; /* @kind font */
+  --be-lh-body:    1.6;  /* @kind font */
+
+  /* ---- Type scale (fluid-ready px values) ---- */
+  --be-text-3xs: 11px;
+  --be-text-2xs: 12px;
+  --be-text-xs:  13px;
+  --be-text-sm:  15px;
+  --be-text-md:  17px;
+  --be-text-lg:  21px;
+  --be-text-xl:  28px;
+  --be-text-2xl: 38px;
+  --be-text-3xl: 52px;
+  --be-text-4xl: 72px;
+  --be-text-5xl: 104px;
+  --be-text-6xl: 148px;
+}
+
+/* ============================================================
+   READY-MADE TEXT ROLES (optional helpers)
+   ============================================================ */
+
+.be-display {
+  font-family: var(--be-font-display);
+  font-weight: var(--be-w-bold);
+  text-transform: uppercase;
+  letter-spacing: var(--be-track-display);
+  line-height: var(--be-lh-heading);
+}
+
+.be-impact {
+  font-family: var(--be-font-impact);
+  font-weight: var(--be-w-regular);
+  text-transform: uppercase;
+  letter-spacing: var(--be-track-impact);
+  line-height: var(--be-lh-tight);
+}
+
+.be-label {
+  font-family: var(--be-font-body);
+  font-weight: var(--be-w-semibold);
+  text-transform: uppercase;
+  letter-spacing: var(--be-track-label);
+  font-size: var(--be-text-2xs);
+}
+
+.be-body {
+  font-family: var(--be-font-body);
+  font-weight: var(--be-w-regular);
+  letter-spacing: var(--be-track-body);
+  line-height: var(--be-lh-body);
+}
