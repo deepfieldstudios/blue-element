@@ -23,7 +23,7 @@
       { t: 'Calendar', s: "25/26 season · what's on, when", href: 'calendar.html' }
     ]},
     { id: 'competition', label: 'Competitions', href: 'competition.html', pages: ['competition'], items: [
-      { t: 'Annual Competition', s: 'Nov 7–15, 2026 · Soufrière Bay', href: 'competition.html' },
+      { t: 'Annual Competition', s: 'Nov 8–17, 2026 · Soufrière Bay', href: 'competition.html' },
       { t: 'Results & Records', s: 'National & world records set here', href: 'competition.html#results' },
       { t: 'Past Events', s: 'A decade of deep diving', href: 'competition.html#past' },
       { t: 'Calendar', s: "25/26 season · what's on, when", href: 'calendar.html' }
