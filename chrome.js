@@ -67,7 +67,7 @@
       '<a class="brand" href="index.html" aria-label="Blue Element — home"><img src="' + LOGO + '" alt="Blue Element Freediving" /></a>' +
       '<nav class="nav" aria-label="Primary">' + navHtml + '</nav>' +
       '<div class="header-cta">' +
-        '<a class="btn btn-teal btn-sm" href="mailto:' + MAIL + '?subject=Booking%20enquiry%20%E2%80%94%20Blue%20Element">Book Now</a>' +
+        '<a class="btn btn-teal btn-sm" href="book.html">Book Now</a>' +
         '<button class="menu-toggle" id="menuToggle" aria-label="Open menu" aria-expanded="false"><span></span><span></span><span></span></button>' +
       '</div>' +
     '</div>';
@@ -83,7 +83,7 @@
     var links = g.items.map(function (i) { return '<a class="m-link" href="' + i.href + '">' + i.t + '</a>'; }).join('');
     return '<div class="m-group"><div class="m-head">' + g.label + '</div>' + links + '</div>';
   }).join('');
-  mobileHtml += '<a class="btn btn-teal btn-lg" href="mailto:' + MAIL + '?subject=Booking%20enquiry%20%E2%80%94%20Blue%20Element" style="margin-top:28px;width:100%;">Book Now</a>';
+  mobileHtml += '<a class="btn btn-teal btn-lg" href="book.html" style="margin-top:28px;width:100%;">Book Now</a>';
 
   var drawer = document.createElement('div');
   drawer.className = 'mobile-nav';

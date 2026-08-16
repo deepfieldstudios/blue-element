@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Book &amp; Buy — Courses, Competitions &amp; Training · Blue Element, Dominica</title>
+<meta name="description" content="Book and pay online for everything Blue Element offers in Soufrière, Dominica — freediving courses & private coaching, competition entries, and platform training. Secure checkout." />
+<link rel="stylesheet" href="site.css" />
+<style>
+  /* ---- Book/shop page (scoped) ---- */
+  .shop-lead-strip{background:var(--be-ocean-blue,#044f7d);color:#fff;}
+  .shop-jump{display:flex;flex-wrap:wrap;gap:12px;justify-content:center;padding:22px 0;}
+  .shop-jump a{display:inline-flex;align-items:center;gap:8px;padding:9px 18px;border-radius:999px;
+    border:1px solid rgba(255,255,255,.35);color:#fff;text-decoration:none;font-size:13px;
+    letter-spacing:.04em;transition:background .2s,border-color .2s;}
+  .shop-jump a:hover{background:rgba(255,255,255,.12);border-color:rgba(255,255,255,.7);}
+
+  .shop-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(270px,1fr));gap:22px;margin-top:42px;}
+  .shop-card{display:flex;flex-direction:column;background:#fff;border:1px solid var(--be-border,rgba(4,79,125,.14));
+    border-radius:20px;padding:26px 24px;box-shadow:0 10px 30px rgba(2,27,46,.06);}
+  .shop-card .lvl{font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:var(--be-teal,#207d92);font-weight:600;}
+  .shop-card h3{margin:10px 0 8px;font-size:21px;line-height:1.15;color:var(--be-ocean-blue,#044f7d);}
+  .shop-card p{font-size:14px;line-height:1.55;color:var(--be-text-soft,#4a5b66);flex:1 1 auto;margin:0 0 18px;}
+  .shop-card .cap{display:inline-block;align-self:flex-start;margin-bottom:14px;padding:4px 11px;border-radius:999px;
+    background:rgba(32,125,146,.12);color:var(--be-teal,#207d92);font-size:12px;font-weight:600;letter-spacing:.03em;}
+  .shop-foot{display:flex;align-items:center;justify-content:space-between;gap:14px;margin-top:auto;}
+  .shop-foot .price{font-size:26px;font-weight:800;color:var(--be-ocean-blue,#044f7d);line-height:1;}
+  .shop-foot .price small{display:block;font-size:11px;font-weight:500;letter-spacing:.05em;color:var(--be-text-soft,#4a5b66);text-transform:uppercase;margin-top:4px;}
+  .shop-buy{white-space:nowrap;}
+  .shop-buy.is-enquire{background:transparent;border:1.5px solid var(--be-teal,#207d92);color:var(--be-teal,#207d92);}
+
+  /* tiered (training) rows */
+  .buy-rows{display:flex;flex-direction:column;gap:10px;margin-top:auto;}
+  .buy-row{display:grid;grid-template-columns:1fr auto auto;align-items:center;gap:12px;
+    padding-top:10px;border-top:1px solid var(--be-border,rgba(4,79,125,.12));}
+  .buy-row:first-child{border-top:0;}
+  .buy-row .tier{font-size:14px;color:var(--be-ink,#15293f);font-weight:600;}
+  .buy-row .price-sm{font-size:17px;font-weight:800;color:var(--be-ocean-blue,#044f7d);}
+</style>
+</head>
+<body data-page="book">
+
+<!-- ============================== HERO ============================== -->
+<section class="page-hero" data-screen-label="Book — Hero">
+  <div class="page-hero-media"><img id="heroImg" src="assets/media/clean/platform-best.jpg" style="object-position:center 50%;" alt="The Blue Element platform on the calm water of Soufrière Bay" /></div>
+  <div class="page-hero-inner">
+    <div class="container">
+      <nav class="breadcrumb reveal"><a href="index.html">Home</a> <span class="sep">/</span> Book</nav>
+      <h1 class="reveal d1">Book<br />&amp; Buy</h1>
+      <p class="ph-sub reveal d2">Everything Blue Element offers, in one place — courses &amp; private coaching, competition entries, and platform training. Reserve your spot and pay securely online.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ============================== JUMP STRIP ============================== -->
+<section class="shop-lead-strip">
+  <div class="container">
+    <div class="shop-jump reveal">
+      <a href="#courses">Courses &amp; Coaching</a>
+      <a href="#competitions">Competitions</a>
+      <a href="#training">Training</a>
+    </div>
+  </div>
+</section>
+
+<!-- ============================== COURSES & COACHING ============================== -->
+<section class="section bg-light" id="courses" data-screen-label="Book — Courses">
+  <div class="container">
+    <div class="section-head reveal">
+      <p class="eyebrow">Learn &amp; go deeper</p>
+      <h2 class="display">Courses &amp; Coaching</h2>
+      <p class="lead">Internationally recognised AIDA &amp; Molchanovs courses from first breath to instructor, plus one-to-one coaching — guided by world-record holders in the calmest water in the Caribbean.</p>
+    </div>
+    <div class="shop-grid">
+
+      <article class="shop-card reveal">
+        <span class="lvl">AIDA 1 · Discover</span>
+        <h3>Try Freediving</h3>
+        <p>A half-day taste — breathe, relax and make your first dives to around 6m. No experience needed.</p>
+        <div class="shop-foot"><span class="price">$175<small>Half day</small></span><a class="btn btn-teal shop-buy" data-buy="course-try" href="#"><span class="buy-label">Book Now</span></a></div>
+      </article>
+
+      <article class="shop-card reveal">
+        <span class="lvl">AIDA 2 / Wave 1</span>
+        <h3>Freediver</h3>
+        <p>Your first full certification — equalisation, finning, rescue and dives to 16–20m over two to three days.</p>
+        <div class="shop-foot"><span class="price">$450<small>2–3 days</small></span><a class="btn btn-teal shop-buy" data-buy="course-freediver" href="#"><span class="buy-label">Book Now</span></a></div>
+      </article>
+
+      <article class="shop-card reveal">
+        <span class="lvl">AIDA 3 / Wave 2</span>
+        <h3>Advanced Freediver</h3>
+        <p>Free immersion, mouthfill equalisation and rescue from depth. Dives to 24–30m.</p>
+        <div class="shop-foot"><span class="price">$525<small>3 days</small></span><a class="btn btn-teal shop-buy" data-buy="course-advanced" href="#"><span class="buy-label">Book Now</span></a></div>
+      </article>
+
+      <article class="shop-card reveal">
+        <span class="lvl">AIDA 4 / Wave 3</span>
+        <h3>Master Freediver</h3>
+        <p>The deepest recreational certification — advanced mouthfill, full safety and dives beyond 38m.</p>
+        <div class="shop-foot"><span class="price">$650<small>4 days</small></span><a class="btn btn-teal shop-buy" data-buy="course-master" href="#"><span class="buy-label">Book Now</span></a></div>
+      </article>
+
+      <article class="shop-card reveal">
+        <span class="lvl">Specialist</span>
+        <h3>Vertical Blue Safety Course</h3>
+        <p>The competition-grade deep-water safety qualification — line management, rescue from depth and O₂ protocols, over four days.</p>
+        <div class="shop-foot"><span class="price">$450<small>4 days</small></span><a class="btn btn-teal shop-buy" data-buy="course-vb-safety" href="#"><span class="buy-label">Book Now</span></a></div>
+      </article>
+
+      <article class="shop-card reveal">
+        <span class="lvl">Advanced</span>
+        <h3>No Limits Session</h3>
+        <p>Sled-based depth diving for experienced freedivers chasing a personal best, under full supervision.</p>
+        <div class="shop-foot"><span class="price">$150<small>Per session</small></span><a class="btn btn-teal shop-buy" data-buy="course-nolimits" href="#"><span class="buy-label">Book Now</span></a></div>
+      </article>
+
+      <article class="shop-card reveal">
+        <span class="lvl">1:1 Coaching</span>
+        <h3>Private Coaching</h3>
+        <p>Already certified and chasing a number? One-to-one blocks (½ or full day) tailored to your technique, equalisation and goals — with video review and daily debriefs.</p>
+        <div class="shop-foot"><span class="price">From&nbsp;$95<small>½ / full day</small></span><a class="btn btn-teal shop-buy" data-buy="coaching-private" href="#"><span class="buy-label">Book Now</span></a></div>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+<!-- ============================== COMPETITIONS ============================== -->
+<section class="section bg-deep" id="competitions" data-screen-label="Book — Competitions">
+  <div class="container">
+    <div class="section-head reveal">
+      <p class="eyebrow on-dark">Take your place on the line</p>
+      <h2 class="display" style="color:#fff;">Competitions</h2>
+      <p class="lead on-dark">World-record-rated AIDA and CMAS depth competitions in Soufrière / Scott's Head Bay. Spaces are strictly limited — entries close when the platform is full.</p>
+    </div>
+    <div class="shop-grid">
+
+      <article class="shop-card reveal">
+        <span class="lvl">AIDA · World-record status</span>
+        <h3>Blue Element Competition</h3>
+        <span class="cap">Nov 8–17, 2026 · 44 spots</span>
+        <p>Six dive days across CWT, CWTB, CNF and FIM on a platform built for clean, safe deep dives — organised by Jonathan Sunnex &amp; Harry McCahill with a seasoned international crew.</p>
+        <div class="shop-foot"><span class="price">$850<small>Athlete entry</small></span><a class="btn btn-teal shop-buy" data-buy="comp-nov-aida" href="#"><span class="buy-label">Enter</span></a></div>
+      </article>
+
+      <article class="shop-card reveal">
+        <span class="lvl">CMAS · World-record status</span>
+        <h3>Blue Element CMAS</h3>
+        <span class="cap">Nov 20–24, 2026 · 12 spots</span>
+        <p>An intimate, small-field CMAS depth competition on home water — same platform, same safety, capped at just twelve athletes.</p>
+        <div class="shop-foot"><span class="price">$500<small>Athlete entry</small></span><a class="btn btn-teal shop-buy" data-buy="comp-nov-cmas" href="#"><span class="buy-label">Enter</span></a></div>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+<!-- ============================== TRAINING ============================== -->
+<section class="section bg-light" id="training" data-screen-label="Book — Training">
+  <div class="container">
+    <div class="section-head reveal">
+      <p class="eyebrow">Train on the platform</p>
+      <h2 class="display">Training</h2>
+      <p class="lead">Already trained and want platform time? Book supported access by the day, week or month — from self-guided buddy sessions to full competition-grade elite support.</p>
+    </div>
+    <div class="shop-grid" style="grid-template-columns:repeat(auto-fill,minmax(320px,1fr));">
+
+      <article class="shop-card reveal">
+        <span class="lvl">Self-guided</span>
+        <h3>Autonomous Platform Access</h3>
+        <p>Counter-ballasted mainline to 145m, set depths and a supervising buddy safety system — you run your session, we provide the safety net.</p>
+        <div class="buy-rows">
+          <div class="buy-row"><span class="tier">Daily</span><span class="price-sm">$35</span><a class="btn btn-teal btn-sm shop-buy" data-buy="train-auto-day" href="#"><span class="buy-label">Book</span></a></div>
+          <div class="buy-row"><span class="tier">Weekly</span><span class="price-sm">$125</span><a class="btn btn-teal btn-sm shop-buy" data-buy="train-auto-week" href="#"><span class="buy-label">Book</span></a></div>
+          <div class="buy-row"><span class="tier">Monthly</span><span class="price-sm">$375</span><a class="btn btn-teal btn-sm shop-buy" data-buy="train-auto-month" href="#"><span class="buy-label">Book</span></a></div>
+        </div>
+      </article>
+
+      <article class="shop-card reveal">
+        <span class="lvl">Full support</span>
+        <h3>Elite Support</h3>
+        <p>Counter-ballast recovery, staged in-water safety and deco O₂ included, with optional coaching, sonar and video review — for deep performance and record attempts.</p>
+        <div class="buy-rows">
+          <div class="buy-row"><span class="tier">Daily</span><span class="price-sm">$75</span><a class="btn btn-teal btn-sm shop-buy" data-buy="train-elite-day" href="#"><span class="buy-label">Book</span></a></div>
+          <div class="buy-row"><span class="tier">Monthly</span><span class="price-sm">$675</span><a class="btn btn-teal btn-sm shop-buy" data-buy="train-elite-month" href="#"><span class="buy-label">Book</span></a></div>
+        </div>
+      </article>
+
+    </div>
+    <p class="reveal" style="margin-top:26px;font-size:13px;color:var(--be-text-soft,#4a5b66);">All prices in USD. Secure checkout — card, Apple Pay &amp; Google Pay. Bringing a group, combining courses, or after something bespoke? <a href="mailto:blueelementfreediving@gmail.com?subject=Booking%20enquiry%20%E2%80%94%20Blue%20Element" style="color:var(--be-teal,#207d92);">Just ask</a>.</p>
+  </div>
+</section>
+
+<!-- ============================== CTA ============================== -->
+<section class="convert" data-screen-label="Book — CTA">
+  <div class="convert-inner container">
+    <p class="eyebrow center on-dark reveal" style="justify-content:center;margin-bottom:24px;">Not sure where to start?</p>
+    <h2 class="reveal d1">Tell us your goal.</h2>
+    <p class="lead reveal d2">Whatever you're chasing — your first breath-hold, a personal best, or a place on the competition line — we'll map the path.</p>
+    <div class="actions reveal d3">
+      <a class="btn btn-teal btn-lg" href="mailto:blueelementfreediving@gmail.com?subject=Booking%20enquiry%20%E2%80%94%20Blue%20Element">Enquire</a>
+      <a class="btn btn-ghost-light btn-lg" href="courses.html">Explore courses</a>
+    </div>
+  </div>
+</section>
+
+<!-- Checkout wiring: paste Stripe Payment Link URLs into STRIPE_LINKS below. -->
+<script>
+(function () {
+  var STRIPE_LINKS = {
+    'course-try': '',
+    'course-freediver': '',
+    'course-advanced': '',
+    'course-master': '',
+    'course-vb-safety': '',
+    'course-nolimits': '',
+    'coaching-private': '',
+    'comp-nov-aida': '',
+    'comp-nov-cmas': '',
+    'train-auto-day': '',
+    'train-auto-week': '',
+    'train-auto-month': '',
+    'train-elite-day': '',
+    'train-elite-month': ''
+  };
+  var MAIL = 'blueelementfreediving@gmail.com';
+  document.querySelectorAll('[data-buy]').forEach(function (el) {
+    var id = el.getAttribute('data-buy');
+    var url = STRIPE_LINKS[id];
+    if (url) {
+      el.setAttribute('href', url);
+      el.setAttribute('rel', 'noopener');
+    } else {
+      // No live payment link yet → graceful fallback to an enquiry email.
+      el.setAttribute('href', 'mailto:' + MAIL + '?subject=' + encodeURIComponent('Booking enquiry — ' + id));
+      el.classList.add('is-enquire');
+      var lbl = el.querySelector('.buy-label');
+      if (lbl) lbl.textContent = 'Enquire';
+    }
+  });
+})();
+</script>
+
+<script src="chrome.js" defer></script>
+<script src="pages.js" defer></script>
+</body>
+</html>
