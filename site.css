@@ -233,7 +233,7 @@ h1, h2, h3, h4, p { margin: 0; }
 .beat-strip .three b { color: #fff; font-weight: 700; }
 .beat-strip .eyebrow { color: rgba(255,255,255,.92); }
 .beat-strip .container { text-align: center; }
-.video-embed { position: relative; width: 100%; aspect-ratio: 16 / 9; margin-top: clamp(32px,4vw,52px); border-radius: 18px; overflow: hidden; box-shadow: 0 24px 64px rgba(2,27,46,.4); background: #021b2e; }
+.video-embed { position: relative; width: 100%; max-width: 1120px; margin-inline: auto; aspect-ratio: 3 / 2; margin-top: clamp(32px,4vw,52px); border-radius: 18px; overflow: hidden; box-shadow: 0 24px 64px rgba(2,27,46,.4); background: #021b2e; }
 .video-embed iframe { position: absolute; inset: 0; width: 100%; height: 100%; border: 0; }
 
 /* ============================================================
