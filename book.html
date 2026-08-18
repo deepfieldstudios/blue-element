@@ -205,42 +205,8 @@
   </div>
 </section>
 
-<!-- Checkout wiring: paste Stripe Payment Link URLs into STRIPE_LINKS below. -->
-<script>
-(function () {
-  var STRIPE_LINKS = {
-    'course-try': '',
-    'course-freediver': '',
-    'course-advanced': '',
-    'course-master': '',
-    'course-vb-safety': '',
-    'course-nolimits': '',
-    'coaching-private': '',
-    'comp-nov-aida': '',
-    'comp-nov-cmas': '',
-    'train-auto-day': '',
-    'train-auto-week': '',
-    'train-auto-month': '',
-    'train-elite-day': '',
-    'train-elite-month': ''
-  };
-  var MAIL = 'blueelementfreediving@gmail.com';
-  document.querySelectorAll('[data-buy]').forEach(function (el) {
-    var id = el.getAttribute('data-buy');
-    var url = STRIPE_LINKS[id];
-    if (url) {
-      el.setAttribute('href', url);
-      el.setAttribute('rel', 'noopener');
-    } else {
-      // No live payment link yet → graceful fallback to an enquiry email.
-      el.setAttribute('href', 'mailto:' + MAIL + '?subject=' + encodeURIComponent('Booking enquiry — ' + id));
-      el.classList.add('is-enquire');
-      var lbl = el.querySelector('.buy-label');
-      if (lbl) lbl.textContent = 'Enquire';
-    }
-  });
-})();
-</script>
+<!-- Checkout wiring: paste Stripe Payment Link URLs into shop-links.js (single source of truth). -->
+<script src="shop-links.js"></script>
 
 <script src="chrome.js" defer></script>
 <script src="pages.js" defer></script>
