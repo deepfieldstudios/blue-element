@@ -17,6 +17,8 @@ window.STRIPE_LINKS = {
   'coaching-private': '',
   'comp-nov-aida': '',
   'comp-nov-cmas': '',
+  'comp-mar-aida': '',
+  'comp-may-open': '',
   'train-auto-day': '',
   'train-auto-week': '',
   'train-auto-month': '',
