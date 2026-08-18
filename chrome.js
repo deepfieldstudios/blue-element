@@ -20,13 +20,13 @@
       { t: 'Courses', s: 'AIDA & Molchanovs · to instructor', href: 'courses.html' },
       { t: 'Training', s: 'Autonomous & elite · to 90m+', href: 'training.html' },
       { t: 'Private Coaching & Camps', s: 'Depth camps · from $725 a week', href: 'camps.html' },
-      { t: 'Calendar', s: "25/26 season · what's on, when", href: 'calendar.html' }
+      { t: 'Calendar', s: "26/27 season · what's on, when", href: 'calendar.html' }
     ]},
     { id: 'competition', label: 'Competitions', href: 'competition.html', pages: ['competition'], items: [
       { t: 'Annual Competition', s: 'Nov 8–17, 2026 · Soufrière Bay', href: 'competition.html' },
       { t: 'Results & Records', s: 'National & world records set here', href: 'competition.html#results' },
       { t: 'Past Events', s: 'A decade of deep diving', href: 'competition.html#past' },
-      { t: 'Calendar', s: "25/26 season · what's on, when", href: 'calendar.html' }
+      { t: 'Calendar', s: "26/27 season · what's on, when", href: 'calendar.html' }
     ]},
     { id: 'athletes', label: 'Athletes', href: 'athletes.html', pages: ['athletes', 'sponsorship'], items: [
       { t: 'Harry McCahill', s: 'Co-founder · UK · CNF #1', href: 'athlete-harry.html' },
