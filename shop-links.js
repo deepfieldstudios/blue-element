@@ -12,6 +12,8 @@ window.STRIPE_LINKS = {
   'course-master': '',
   'course-vb-safety': '',
   'course-nolimits': '',
+  'course-instructor': '',
+  'eq-clinic': '',
   'coaching-private': '',
   'comp-nov-aida': '',
   'comp-nov-cmas': '',
