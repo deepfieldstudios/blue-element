@@ -1,0 +1,13 @@
+{
+  "name": "Blue Element Freediving",
+  "short_name": "Blue Element",
+  "description": "Freediving courses, training, competitions and depth camps in Soufrière, Dominica.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#021b2e",
+  "theme_color": "#021b2e",
+  "icons": [
+    { "src": "/assets/favicon/icon-192.png", "sizes": "192x192", "type": "image/png" },
+    { "src": "/assets/favicon/icon-512.png", "sizes": "512x512", "type": "image/png" }
+  ]
+}
