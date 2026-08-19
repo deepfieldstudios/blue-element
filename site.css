@@ -395,8 +395,8 @@ a.cal-row:hover { background: rgba(32,125,146,.06); }
 @keyframes tc-pulse { 0%, 100% { box-shadow: 0 0 0 0 rgba(42,147,168,.55); } 50% { box-shadow: 0 0 0 7px rgba(42,147,168,0); } }
 .topclock .tc-digits { margin-top: 14px; display: flex; align-items: baseline; gap: 10px; }
 .topclock .tc-cell { display: flex; flex-direction: column; gap: 5px; min-width: 58px; }
-.topclock .tc-num { font-family: var(--be-font-impact); font-size: clamp(30px, 2.8vw, 44px); line-height: 1; color: #fff;
-  font-variant-numeric: tabular-nums; }
+.topclock .tc-num { font-family: var(--be-font-impact); font-size: clamp(30px, 2.8vw, 44px); line-height: 1; color: #d8c74a;
+  text-shadow: 0 1px 12px rgba(2,27,46,.55); font-variant-numeric: tabular-nums; }
 .topclock .tc-num.tick { animation: tc-tick .45s var(--be-ease-out); }
 @keyframes tc-tick { 0% { transform: translateY(-8px); opacity: 0; } 100% { transform: translateY(0); opacity: 1; } }
 .topclock .tc-u { font-size: 10px; letter-spacing: .18em; text-transform: uppercase; color: var(--be-sky-blue); font-weight: 600; }
