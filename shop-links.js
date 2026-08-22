@@ -16,7 +16,7 @@ window.STRIPE_LINKS = {
   'eq-clinic': 'https://buy.stripe.com/14AdR864Tdfb9y85oOdby0b',
   'coaching-private': '',
   'camp-week': 'https://buy.stripe.com/6oU00ibpd2AxeSs18ydby0c',
-  'retreat-matt-hill': '',
+  'retreat-matt-hill': 'https://buy.stripe.com/00w8wO8d17UR25GcRgdby0d',
   'comp-nov-aida': 'https://book.stripe.com/14A5kC50Pa2Z39KdVkdby00',
   'comp-nov-cmas': 'https://book.stripe.com/dRm6oGcthejffWw6sSdby01',
   'comp-mar-aida': 'https://book.stripe.com/5kQ6oG9h5grn6lWg3sdby02',
