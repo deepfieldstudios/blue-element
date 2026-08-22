@@ -10,7 +10,7 @@ window.STRIPE_LINKS = {
   'course-freediver': 'https://buy.stripe.com/8x23cueBp1wt39K04udby05',
   'course-advanced': 'https://buy.stripe.com/eVqcN48d10sp4dOaJ8dby06',
   'course-master': 'https://buy.stripe.com/fZuaEW2SHb735hS6sSdby07',
-  'course-vb-safety': '',
+  'course-vb-safety': 'https://buy.stripe.com/8x2fZgeBp2Ax6lW8B0dby08',
   'course-nolimits': '',
   'course-instructor': '',
   'eq-clinic': '',
