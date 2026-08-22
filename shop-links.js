@@ -19,7 +19,7 @@ window.STRIPE_LINKS = {
   'retreat-matt-hill': '',
   'comp-nov-aida': 'https://book.stripe.com/14A5kC50Pa2Z39KdVkdby00',
   'comp-nov-cmas': 'https://book.stripe.com/dRm6oGcthejffWw6sSdby01',
-  'comp-mar-aida': '',
+  'comp-mar-aida': 'https://book.stripe.com/5kQ6oG9h5grn6lWg3sdby02',
   'comp-may-open': '',
   'train-auto-day': '',
   'train-auto-week': '',
