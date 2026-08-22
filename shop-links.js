@@ -13,7 +13,7 @@ window.STRIPE_LINKS = {
   'course-vb-safety': 'https://buy.stripe.com/8x2fZgeBp2Ax6lW8B0dby08',
   'course-nolimits': 'https://buy.stripe.com/aFacN4gJx4IF8u4eZodby09',
   'course-instructor': 'https://buy.stripe.com/cNi8wO78XdfbfWw8B0dby0a',
-  'eq-clinic': '',
+  'eq-clinic': 'https://buy.stripe.com/14AdR864Tdfb9y85oOdby0b',
   'coaching-private': '',
   'camp-week': '',
   'retreat-matt-hill': '',
