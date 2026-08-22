@@ -17,7 +17,7 @@ window.STRIPE_LINKS = {
   'coaching-private': '',
   'camp-week': '',
   'retreat-matt-hill': '',
-  'comp-nov-aida': '',
+  'comp-nov-aida': 'https://book.stripe.com/14A5kC50Pa2Z39KdVkdby00',
   'comp-nov-cmas': '',
   'comp-mar-aida': '',
   'comp-may-open': '',
