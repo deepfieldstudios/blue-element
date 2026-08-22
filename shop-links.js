@@ -12,7 +12,7 @@ window.STRIPE_LINKS = {
   'course-master': 'https://buy.stripe.com/fZuaEW2SHb735hS6sSdby07',
   'course-vb-safety': 'https://buy.stripe.com/8x2fZgeBp2Ax6lW8B0dby08',
   'course-nolimits': 'https://buy.stripe.com/aFacN4gJx4IF8u4eZodby09',
-  'course-instructor': '',
+  'course-instructor': 'https://buy.stripe.com/cNi8wO78XdfbfWw8B0dby0a',
   'eq-clinic': '',
   'coaching-private': '',
   'camp-week': '',
