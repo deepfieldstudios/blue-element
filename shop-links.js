@@ -20,7 +20,7 @@ window.STRIPE_LINKS = {
   'comp-nov-aida': 'https://book.stripe.com/14A5kC50Pa2Z39KdVkdby00',
   'comp-nov-cmas': 'https://book.stripe.com/dRm6oGcthejffWw6sSdby01',
   'comp-mar-aida': 'https://book.stripe.com/5kQ6oG9h5grn6lWg3sdby02',
-  'comp-may-open': '',
+  'comp-may-open': 'https://book.stripe.com/eVq6oG0Kz8YVh0AcRgdby03',
   'train-auto-day': '',
   'train-auto-week': '',
   'train-auto-month': '',
