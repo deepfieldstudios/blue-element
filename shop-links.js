@@ -9,7 +9,7 @@ window.STRIPE_LINKS = {
   'course-try': 'https://book.stripe.com/14A3cudxl7UR11C7wWdby04',
   'course-freediver': 'https://buy.stripe.com/8x23cueBp1wt39K04udby05',
   'course-advanced': 'https://buy.stripe.com/eVqcN48d10sp4dOaJ8dby06',
-  'course-master': '',
+  'course-master': 'https://buy.stripe.com/fZuaEW2SHb735hS6sSdby07',
   'course-vb-safety': '',
   'course-nolimits': '',
   'course-instructor': '',
