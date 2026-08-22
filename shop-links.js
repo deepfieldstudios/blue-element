@@ -11,7 +11,7 @@ window.STRIPE_LINKS = {
   'course-advanced': 'https://buy.stripe.com/eVqcN48d10sp4dOaJ8dby06',
   'course-master': 'https://buy.stripe.com/fZuaEW2SHb735hS6sSdby07',
   'course-vb-safety': 'https://buy.stripe.com/8x2fZgeBp2Ax6lW8B0dby08',
-  'course-nolimits': '',
+  'course-nolimits': 'https://buy.stripe.com/aFacN4gJx4IF8u4eZodby09',
   'course-instructor': '',
   'eq-clinic': '',
   'coaching-private': '',
