@@ -15,6 +15,8 @@ window.STRIPE_LINKS = {
   'course-instructor': '',
   'eq-clinic': '',
   'coaching-private': '',
+  'camp-week': '',
+  'retreat-matt-hill': '',
   'comp-nov-aida': '',
   'comp-nov-cmas': '',
   'comp-mar-aida': '',
