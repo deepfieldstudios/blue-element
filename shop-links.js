@@ -6,7 +6,7 @@
    Stripe link exists (otherwise it falls back to an enquiry email).
    ============================================================ */
 window.STRIPE_LINKS = {
-  'course-try': '',
+  'course-try': 'https://book.stripe.com/14A3cudxl7UR11C7wWdby04',
   'course-freediver': '',
   'course-advanced': '',
   'course-master': '',
