@@ -39,6 +39,24 @@
 .evp-highlights .h .l{margin-top:8px;color:var(--be-text-soft);font-size:14px;line-height:1.35;}
 @media(max-width:820px){.evp-highlights{grid-template-columns:repeat(2,1fr);}}
 
+/* Email gate */
+.gate{background:linear-gradient(135deg,#021B2E 0%,#033C62 55%,#044F7D 100%);border-radius:22px;color:#fff;padding:clamp(28px,4vw,52px);position:relative;overflow:hidden;}
+.gate::after{content:"";position:absolute;inset:0;background:radial-gradient(120% 90% at 100% 0%,rgba(42,147,168,.35),transparent 60%);pointer-events:none;}
+.gate-inner{position:relative;z-index:1;max-width:640px;}
+.gate .eyebrow{color:var(--be-surface-teal);}
+.gate h2{color:#fff;font-size:clamp(26px,3.4vw,40px);line-height:1.08;margin:14px 0 12px;}
+.gate p.sub{color:rgba(255,255,255,.82);font-size:16px;line-height:1.55;max-width:52ch;}
+.gate-form{display:flex;gap:12px;margin-top:26px;flex-wrap:wrap;}
+.gate-form input[type=email]{flex:1;min-width:240px;border:1px solid rgba(255,255,255,.25);background:rgba(255,255,255,.08);color:#fff;border-radius:12px;padding:15px 18px;font-size:16px;outline:none;transition:border-color .2s,background .2s;}
+.gate-form input[type=email]::placeholder{color:rgba(255,255,255,.6);}
+.gate-form input[type=email]:focus{border-color:var(--be-surface-teal);background:rgba(255,255,255,.14);}
+.gate-note{margin-top:14px;font-size:13px;color:rgba(255,255,255,.6);}
+.gate-msg{margin-top:16px;font-size:15px;font-weight:600;color:var(--be-sky-blue);display:none;}
+.gate.done .gate-form,.gate.done .gate-note{display:none;}
+.gate.done .gate-msg{display:block;}
+.pack-locked{display:none;}
+.pack-locked.open{display:block;}
+
 /* Pricing */
 .price-grid{display:grid;grid-template-columns:1fr 1fr;gap:clamp(18px,3vw,32px);margin-top:clamp(24px,3vw,36px);align-items:start;}
 .price-card{border:1px solid rgba(4,79,125,.14);border-radius:18px;padding:26px;background:#fff;display:flex;flex-direction:column;}
@@ -110,7 +128,7 @@
         </div>
         <div class="tc-sub">18 March 2027 · Soufrière Bay, Dominica</div>
       </div>
-      <div class="actions reveal d3" style="margin-top:28px;"><a class="btn btn-teal btn-lg" href="#register">Register &amp; pay</a></div>
+      <div class="actions reveal d3" style="margin-top:28px;"><a class="btn btn-teal btn-lg" href="#pack">Get the event pack</a></div>
     </div>
   </div>
 </section>
@@ -136,8 +154,30 @@
   </div>
 </section>
 
+<!-- ============================== EMAIL GATE ============================== -->
+<section class="section bg-white" id="pack" data-screen-label="March Mini 2027 — Unlock">
+  <div class="container">
+    <div class="gate reveal" id="gate" data-storage-key="be_marchmini_pack">
+      <div class="gate-inner">
+        <p class="eyebrow">The March Mini pack</p>
+        <h2>Get the full pack &amp; secure your spot.</h2>
+        <p class="sub">Drop in your email and we'll send you the Blue Element March Mini pack — plus unlock the full details, pricing and registration right here on the page.</p>
+        <form class="gate-form" id="gateForm" novalidate>
+          <input type="email" name="email" id="gateEmail" placeholder="you@email.com" autocomplete="email" required />
+          <button class="btn btn-teal btn-lg" type="submit">Send me the pack →</button>
+        </form>
+        <p class="gate-note">One email. No spam — just your event pack and the occasional Blue Element update.</p>
+        <p class="gate-msg" id="gateMsg">Thanks — your event pack is on its way. Everything's unlocked below. ↓</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================== LOCKED PACK ============================== -->
+<div class="pack-locked" id="packContent">
+
 <!-- ============================== DETAILS / PRICING ============================== -->
-<section class="section bg-white" id="register" data-screen-label="March Mini 2027 — Register">
+<section class="section bg-light" id="register" data-screen-label="March Mini 2027 — Register">
   <div class="container">
     <div class="section-head reveal">
       <p class="eyebrow">Event details</p>
@@ -297,7 +337,10 @@
   </div>
 </section>
 
+</div><!-- /.pack-locked -->
+
 <script src="shop-links.js"></script>
+<script src="lead.js" defer></script>
 <script src="chrome.js" defer></script>
 <script src="pages.js" defer></script>
 </body>

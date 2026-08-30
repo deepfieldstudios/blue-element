@@ -160,7 +160,7 @@
 <!-- ============================== EMAIL GATE ============================== -->
 <section class="section bg-white" id="pack" data-screen-label="Nov 2026 — Unlock">
   <div class="container">
-    <div class="gate reveal" id="gate">
+    <div class="gate reveal" id="gate" data-storage-key="be_nov2026_pack">
       <div class="gate-inner">
         <p class="eyebrow">The 2026 event pack</p>
         <h2>Get the full pack &amp; secure your spot.</h2>
@@ -351,83 +351,8 @@
 
 </div><!-- /.pack-locked -->
 
-<script>
-/* ===== Email capture + unlock =====================================
-   Subscribes the email to your MailerLite (or Mailchimp) list so the
-   provider's automation auto-emails the event pack, then unlocks the
-   pack on the page. The POST uses mode:'no-cors', so it works from a
-   static site with no backend and nothing is ever blocked on the wire.
-
-   TO GO LIVE — fill the three values below:
-   • MailerLite (recommended): create an embedded form, then from its
-     HTML snippet copy:
-       endpoint   -> the form's  action="https://assets.mailerlite.com/jsonp/<ACCT>/forms/<FORMID>/subscribe"
-       emailField -> 'fields[email]'
-       extra      -> { 'ml-submit': '1', 'anticsrf': 'true' }
-   • Mailchimp: from your list's embedded-form code copy:
-       endpoint   -> the form's action, but change "/post?" to "/post-json?"  (…list-manage.com/subscribe/post-json?u=XXX&id=YYY)
-       emailField -> 'EMAIL'
-       extra      -> {}   (leave empty)
-   ================================================================= */
-(function () {
-  var LEAD = {
-    endpoint: '',                 // <-- paste your MailerLite/Mailchimp subscribe URL
-    emailField: 'fields[email]',  // MailerLite. For Mailchimp use 'EMAIL'
-    extra: { 'ml-submit': '1', 'anticsrf': 'true' } // MailerLite. For Mailchimp use {}
-  };
-  var STORAGE_KEY = 'be_nov2026_pack';
-
-  var gate = document.getElementById('gate');
-  var form = document.getElementById('gateForm');
-  var input = document.getElementById('gateEmail');
-  var pack = document.getElementById('packContent');
-
-  function unlock(skipScroll) {
-    pack.classList.add('open');
-    if (gate) gate.classList.add('done');
-    // let chrome.js reveal-observer catch the newly shown sections
-    pack.querySelectorAll('.reveal').forEach(function (el) { el.classList.add('in'); });
-    if (!skipScroll) {
-      var packSection = pack.querySelector('section');
-      if (packSection) packSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
-    }
-  }
-
-  // Returning visitor or arrived via emailed link (#unlocked)
-  try {
-    if (localStorage.getItem(STORAGE_KEY) || location.hash === '#unlocked') unlock(true);
-  } catch (e) {}
-
-  if (form) {
-    form.addEventListener('submit', function (ev) {
-      ev.preventDefault();
-      var email = (input.value || '').trim();
-      if (!email || email.indexOf('@') < 1 || email.indexOf('.') < 0) {
-        input.focus();
-        return;
-      }
-      try { localStorage.setItem(STORAGE_KEY, email); } catch (e) {}
-
-      // Subscribe to the email list if configured (non-blocking, no-cors)
-      if (LEAD.endpoint) {
-        var params = new URLSearchParams();
-        params.append(LEAD.emailField, email);
-        var extra = LEAD.extra || {};
-        Object.keys(extra).forEach(function (k) { params.append(k, extra[k]); });
-        fetch(LEAD.endpoint, {
-          method: 'POST',
-          mode: 'no-cors',
-          body: params
-        }).catch(function () {});
-      }
-
-      unlock(false);
-    });
-  }
-})();
-</script>
-
 <script src="shop-links.js"></script>
+<script src="lead.js" defer></script>
 <script src="chrome.js" defer></script>
 <script src="pages.js" defer></script>
 </body>
