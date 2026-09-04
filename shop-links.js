@@ -18,6 +18,7 @@ window.STRIPE_LINKS = {
   'camp-week': 'https://buy.stripe.com/6oU00ibpd2AxeSs18ydby0c',
   'retreat-matt-hill': 'https://buy.stripe.com/00w8wO8d17UR25GcRgdby0d',
   'comp-nov-aida': 'https://book.stripe.com/14A5kC50Pa2Z39KdVkdby00',
+  'comp-nov-aida-training': 'https://buy.stripe.com/6oU8wOfFt1wteSsaJ8dby0e',
   'comp-nov-cmas': 'https://book.stripe.com/dRm6oGcthejffWw6sSdby01',
   'comp-mar-aida': 'https://book.stripe.com/5kQ6oG9h5grn6lWg3sdby02',
   'comp-may-open': 'https://book.stripe.com/eVq6oG0Kz8YVh0AcRgdby03',
@@ -39,6 +40,9 @@ window.STRIPE_LINKS = {
       el.classList.remove('is-enquire');
     } else if (el.getAttribute('data-fallback')) {
       el.setAttribute('href', el.getAttribute('data-fallback'));
+      el.classList.add('is-enquire');
+      var fl = el.querySelector('.buy-label');
+      if (fl) fl.textContent = 'Enquire';
     } else {
       el.setAttribute('href', 'mailto:' + MAIL + '?subject=' + encodeURIComponent('Booking enquiry — ' + id));
       el.classList.add('is-enquire');
