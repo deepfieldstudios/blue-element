@@ -37,7 +37,7 @@ h1, h2, h3, h4, p { margin: 0; }
   font-family: var(--be-font-display);
   text-transform: uppercase;
   letter-spacing: var(--be-track-display);
-  font-weight: var(--be-w-bold);
+  font-weight: var(--be-w-display);
   line-height: var(--be-lh-heading);
 }
 .impact {
@@ -409,7 +409,7 @@ a.cal-row:hover { background: rgba(32,125,146,.06); }
    ============================================================ */
 .convert { position: relative; overflow: hidden; color: #fff; background: var(--be-grad-depth-soft); }.convert::before { content: ""; position: absolute; inset: 0; background: radial-gradient(120% 90% at 80% 0%, rgba(42,147,168,.4), transparent 60%); }
 .convert-inner { position: relative; z-index: 1; padding-block: clamp(72px, 10vw, 140px); text-align: center; }
-.convert h2 { font-family: var(--be-font-display); text-transform: uppercase; letter-spacing: .09em; font-size: clamp(32px, 5.4vw, 72px); line-height: 1.08; }
+.convert h2 { font-family: var(--be-font-display); font-weight: var(--be-w-display); text-transform: uppercase; letter-spacing: .09em; font-size: clamp(32px, 5.4vw, 72px); line-height: 1.08; }
 .convert .lead { margin: 24px auto 0; color: var(--be-sky-blue); }
 .convert .actions { margin-top: 40px; display: flex; gap: 16px; justify-content: center; flex-wrap: wrap; }
 
@@ -492,7 +492,7 @@ html.anim .reveal.d1 { transition-delay: .08s; } html.anim .reveal.d2 { transiti
 .breadcrumb a { color: var(--be-surface-teal); }
 .breadcrumb .sep { opacity: .5; }
 .page-hero h1 { font-family: var(--be-font-display); text-transform: uppercase; letter-spacing: var(--be-track-display);
-  font-weight: 700; line-height: 1.04; font-size: clamp(38px, 6.4vw, 92px); text-shadow: 0 2px 24px rgba(2,27,46,.55); }
+  font-weight: var(--be-w-display); line-height: 1.04; font-size: clamp(38px, 6.4vw, 92px); text-shadow: 0 2px 24px rgba(2,27,46,.55); }
 .page-hero .ph-sub { margin-top: 22px; font-size: clamp(15px, 1.5vw, 20px); color: var(--be-sky-blue); max-width: 52ch; line-height: 1.6; text-shadow: 0 1px 14px rgba(2,27,46,.6); }
 .page-hero .ph-meta { margin-top: 30px; display: flex; flex-wrap: wrap; gap: 12px 28px; }
 .page-hero .ph-meta .mi { display: flex; flex-direction: column; gap: 4px; }

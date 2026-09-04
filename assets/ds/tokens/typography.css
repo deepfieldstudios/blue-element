@@ -2,7 +2,7 @@
    BLUE ELEMENT — TYPOGRAPHY TOKENS
 
    Three voices:
-   1. Display serif  — high-contrast, wide letterspaced UPPERCASE
+   1. Display sans   — grotesque, wide letterspaced UPPERCASE
                        (editorial, laid over photography).
    2. Impact sans    — heavy condensed, tight all-caps
                        (prices, banners, big numbers).
@@ -15,7 +15,7 @@
 
 :root {
   /* ---- Families ---- */
-  --be-font-display: "Playfair Display", "Bodoni Moda", Georgia, serif;
+  --be-font-display: "Chivo", "Archivo", system-ui, sans-serif;
   --be-font-impact:  "Anton", "Oswald", "Arial Narrow", sans-serif;
   --be-font-body:    "Montserrat", "Poppins", system-ui, sans-serif;
 
@@ -25,9 +25,10 @@
   --be-w-semibold: 600; /* @kind font */
   --be-w-bold:    700; /* @kind font */
   --be-w-black:   900; /* @kind font */
+  --be-w-display: 800; /* @kind font */ /* display caps carry more weight as a sans */
 
   /* ---- Tracking (letter-spacing) ---- */
-  --be-track-display: 0.14em;  /* spaced serif caps */
+  --be-track-display: 0.13em;  /* spaced grotesque caps */
   --be-track-label:   0.22em;  /* small tracked uppercase labels */
   --be-track-impact:  0.005em; /* condensed caps, near-tight */
   --be-track-body:    0.005em;
@@ -58,7 +59,7 @@
 
 .be-display {
   font-family: var(--be-font-display);
-  font-weight: var(--be-w-bold);
+  font-weight: var(--be-w-display);
   text-transform: uppercase;
   letter-spacing: var(--be-track-display);
   line-height: var(--be-lh-heading);
