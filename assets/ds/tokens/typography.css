@@ -15,9 +15,9 @@
 
 :root {
   /* ---- Families ---- */
-  --be-font-display: "Sora", "Archivo", system-ui, sans-serif;
-  --be-font-impact:  "Anton", "Oswald", "Arial Narrow", sans-serif;
-  --be-font-body:    "Manrope", "Figtree", system-ui, sans-serif;
+  --be-font-display: "Outfit", "Archivo", system-ui, sans-serif;
+  --be-font-impact:  "Bebas Neue", "Oswald", "Arial Narrow", sans-serif;
+  --be-font-body:    "Figtree", "Manrope", system-ui, sans-serif;
 
   /* ---- Weights ---- */
   --be-w-regular: 400; /* @kind font */
@@ -28,9 +28,9 @@
   --be-w-display: 500; /* @kind font */ /* geometric caps stay light; the tracking carries them */
 
   /* ---- Tracking (letter-spacing) ---- */
-  --be-track-display: 0.11em;  /* spaced geometric caps — Sora runs wide, so less air than the serif took */
+  --be-track-display: 0.12em;  /* spaced geometric caps — Outfit is narrow enough to take the air back */
   --be-track-label:   0.22em;  /* small tracked uppercase labels */
-  --be-track-impact:  0.005em; /* condensed caps, near-tight */
+  --be-track-impact:  0.03em;  /* Bebas is narrower than Anton — a touch more air */
   --be-track-body:    0.005em;
 
   /* ---- Line heights ---- */
