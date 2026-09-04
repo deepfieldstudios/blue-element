@@ -790,3 +790,33 @@ html.anim .reveal.d1 { transition-delay: .08s; } html.anim .reveal.d2 { transiti
   .gal-grid { columns: 1; }
   .page-hero .ph-meta { gap: 12px 20px; }
 }
+
+/* ---- Season grid (calendar.html) ---- */
+.season { --cal-comp: var(--be-ocean-blue); --cal-camp: var(--be-surface-teal); --cal-course: #cdd4a6;
+  margin-top: clamp(36px, 4vw, 56px); }
+.season-months { display: grid; grid-template-columns: repeat(auto-fit, minmax(228px, 1fr));
+  gap: clamp(22px, 2.8vw, 38px); }
+.sm-name { font-family: var(--be-font-body); font-weight: 600; font-size: 11px; letter-spacing: .2em;
+  text-transform: uppercase; color: var(--be-text-soft); margin-bottom: 12px; }
+.sm-grid { display: grid; grid-template-columns: repeat(7, 1fr); gap: 4px; }
+.sm-grid .dow { font-size: 9.5px; letter-spacing: .1em; text-align: center; color: var(--be-text-soft);
+  opacity: .55; padding-bottom: 3px; }
+.sm-grid .d { aspect-ratio: 1; display: flex; align-items: center; justify-content: center;
+  border-radius: 6px; font-size: 12px; font-variant-numeric: tabular-nums;
+  color: var(--be-text-soft); background: rgba(4, 79, 125, .05); }
+.sm-grid .d.pad { background: none; }
+.sm-grid a.d { text-decoration: none; font-weight: 600;
+  transition: transform var(--be-dur-fast) var(--be-ease-out), filter var(--be-dur-fast) var(--be-ease-out); }
+.sm-grid a.d:hover { transform: translateY(-2px); filter: brightness(1.1); }
+.sm-grid a.d:focus-visible { outline: 2px solid var(--be-teal); outline-offset: 2px; }
+.d.is-comp { background: var(--cal-comp); color: #fff; }
+.d.is-camp { background: var(--cal-camp); color: #fff; }
+.d.is-course { background: var(--cal-course); color: var(--be-dark-olive); }
+.season-key { display: flex; flex-wrap: wrap; gap: 12px 28px; align-items: center;
+  margin-top: clamp(30px, 3.2vw, 44px); }
+.sk { display: inline-flex; align-items: center; gap: 9px; font-family: var(--be-font-body);
+  font-weight: 600; font-size: 11px; letter-spacing: .16em; text-transform: uppercase;
+  color: var(--be-text-soft); }
+.sk i { width: 26px; height: 13px; border-radius: 4px; display: block; }
+.season-note { margin-top: 16px; font-size: 13px; color: var(--be-text-soft); max-width: 62ch; }
+@media (prefers-reduced-motion: reduce) { .sm-grid a.d:hover { transform: none; } }
