@@ -14,4 +14,7 @@
    @font-face rules to match the Canva kit exactly.
    ============================================================ */
 
-@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Figtree:wght@300..800&family=Outfit:wght@200..700&family=Oswald:wght@300;400;500;600;700&display=swap");
+/* The Google Fonts request now lives in each page's <head> as a direct
+   <link>, with preconnects. It used to be an @import here, four levels
+   deep inside the CSS chain, which meant five serial render-blocking
+   round trips before a single glyph could paint. Keep it in the HTML. */

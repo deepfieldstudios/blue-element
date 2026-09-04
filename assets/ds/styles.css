@@ -1,9 +1,14 @@
 /* ============================================================
    BLUE ELEMENT DESIGN SYSTEM — global entry point.
-   Consumers link THIS file. It is @imports only.
+   It is @imports only.
+
+   NOTE: site.css imports the token files directly rather than
+   going through this file, so the tokens fetch one round trip
+   earlier. This entry point is kept for any other consumer.
+   Webfonts are NOT imported here — the Google Fonts <link>
+   lives in each page's <head>. See tokens/fonts.css.
    ============================================================ */
 
-@import url("tokens/fonts.css");
 @import url("tokens/colors.css");
 @import url("tokens/typography.css");
 @import url("tokens/spacing.css");

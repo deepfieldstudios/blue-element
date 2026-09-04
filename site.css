@@ -4,7 +4,12 @@
    then adds page-level layout, navigation, and motion.
    ============================================================ */
 
-@import url("assets/ds/styles.css");
+/* Tokens imported directly rather than via assets/ds/styles.css, so they
+   fetch in parallel one level up instead of behind another round trip. */
+@import url("assets/ds/tokens/colors.css");
+@import url("assets/ds/tokens/typography.css");
+@import url("assets/ds/tokens/spacing.css");
+@import url("assets/ds/tokens/effects.css");
 
 /* ---------- reset / base ---------- */
 *, *::before, *::after { box-sizing: border-box; }
