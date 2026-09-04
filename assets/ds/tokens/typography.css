@@ -15,9 +15,9 @@
 
 :root {
   /* ---- Families ---- */
-  --be-font-display: "Chivo", "Archivo", system-ui, sans-serif;
+  --be-font-display: "Sora", "Archivo", system-ui, sans-serif;
   --be-font-impact:  "Anton", "Oswald", "Arial Narrow", sans-serif;
-  --be-font-body:    "Montserrat", "Poppins", system-ui, sans-serif;
+  --be-font-body:    "Manrope", "Figtree", system-ui, sans-serif;
 
   /* ---- Weights ---- */
   --be-w-regular: 400; /* @kind font */
@@ -25,10 +25,10 @@
   --be-w-semibold: 600; /* @kind font */
   --be-w-bold:    700; /* @kind font */
   --be-w-black:   900; /* @kind font */
-  --be-w-display: 800; /* @kind font */ /* display caps carry more weight as a sans */
+  --be-w-display: 500; /* @kind font */ /* geometric caps stay light; the tracking carries them */
 
   /* ---- Tracking (letter-spacing) ---- */
-  --be-track-display: 0.13em;  /* spaced grotesque caps */
+  --be-track-display: 0.11em;  /* spaced geometric caps — Sora runs wide, so less air than the serif took */
   --be-track-label:   0.22em;  /* small tracked uppercase labels */
   --be-track-impact:  0.005em; /* condensed caps, near-tight */
   --be-track-body:    0.005em;
