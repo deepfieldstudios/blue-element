@@ -15,9 +15,15 @@
 
 :root {
   /* ---- Families ---- */
-  --be-font-display: "Outfit", "Archivo", system-ui, sans-serif;
-  --be-font-impact:  "Bebas Neue", "Oswald", "Arial Narrow", sans-serif;
-  --be-font-body:    "Figtree", "Manrope", system-ui, sans-serif;
+  --be-font-display: "Archivo", system-ui, sans-serif;
+  --be-font-impact:  "Archivo", "Arial Narrow", sans-serif;
+  --be-font-body:    "Archivo", system-ui, sans-serif;
+
+  /* ---- Widths (one family, three widths — Archivo wdth axis 62-125) ---- */
+  --be-width-display:    108%; /* @kind font */ /* hero + section heads — expanded, but it has to fit the 760px heading column */
+  --be-width-display-sm: 100%; /* @kind font */ /* card + row headings — no room to expand in a 185px card */
+  --be-width-impact:   68%; /* @kind font */
+  --be-width-body:    100%; /* @kind font */
 
   /* ---- Weights ---- */
   --be-w-regular: 400; /* @kind font */
@@ -25,12 +31,13 @@
   --be-w-semibold: 600; /* @kind font */
   --be-w-bold:    700; /* @kind font */
   --be-w-black:   900; /* @kind font */
-  --be-w-display: 500; /* @kind font */ /* geometric caps stay light; the tracking carries them */
+  --be-w-display: 500; /* @kind font */ /* expanded caps stay light; the width carries them */
+  --be-w-impact:  700; /* @kind font */ /* Archivo needs an explicit weight where Anton was heavy by design */
 
   /* ---- Tracking (letter-spacing) ---- */
-  --be-track-display: 0.12em;  /* spaced geometric caps — Outfit is narrow enough to take the air back */
+  --be-track-display: 0.08em;  /* an expanded face brings its own air; more than this and headings wrap */
   --be-track-label:   0.22em;  /* small tracked uppercase labels */
-  --be-track-impact:  0.03em;  /* Bebas is narrower than Anton — a touch more air */
+  --be-track-impact:  0.01em;  /* condensed Archivo, near-tight */
   --be-track-body:    0.005em;
 
   /* ---- Line heights ---- */
@@ -58,7 +65,7 @@
    ============================================================ */
 
 .be-display {
-  font-family: var(--be-font-display);
+  font-family: var(--be-font-display); font-stretch: var(--be-width-display);
   font-weight: var(--be-w-display);
   text-transform: uppercase;
   letter-spacing: var(--be-track-display);
@@ -66,7 +73,7 @@
 }
 
 .be-impact {
-  font-family: var(--be-font-impact);
+  font-family: var(--be-font-impact); font-stretch: var(--be-width-impact); font-weight: var(--be-w-impact);
   font-weight: var(--be-w-regular);
   text-transform: uppercase;
   letter-spacing: var(--be-track-impact);

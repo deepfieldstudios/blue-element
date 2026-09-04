@@ -5,9 +5,9 @@
    were NOT supplied as files. These Google Fonts are the nearest
    public matches and are loaded remotely:
 
-     Outfit            ≈ geometric display sans, open and round
-     Bebas Neue        ≈ narrow condensed impact caps
-     Figtree           ≈ warm geometric body sans
+     Archivo           ≈ one variable grotesque, width 62-125
+                         expanded for display, condensed for impact,
+                         normal for body
 
    ACTION FOR USER: drop the real .ttf/.woff2 files in
    assets/fonts/ and replace these @imports with local
