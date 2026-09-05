@@ -13,10 +13,15 @@
   /* ---- Book/shop page (scoped) ---- */
   .shop-lead-strip{background:var(--be-ocean-blue,#044f7d);color:#fff;}
   .shop-jump{display:flex;flex-wrap:wrap;gap:12px;justify-content:center;padding:22px 0;}
-  .shop-jump a{display:inline-flex;align-items:center;gap:8px;padding:9px 18px;border-radius:999px;
-    border:1px solid rgba(255,255,255,.35);color:#fff;text-decoration:none;font-size:13px;
-    letter-spacing:.04em;transition:background .2s,border-color .2s;}
-  .shop-jump a:hover{background:rgba(255,255,255,.12);border-color:rgba(255,255,255,.7);}
+  .shop-jump a{display:inline-flex;align-items:center;gap:8px;padding:12px 24px;border-radius:999px;
+    background:#fff;border:1px solid rgba(255,255,255,.9);color:var(--be-ocean-blue);
+    text-decoration:none;font-size:13px;font-weight:600;letter-spacing:.06em;
+    box-shadow:0 8px 18px -8px rgba(1,14,25,.65), inset 0 1px 0 rgba(255,255,255,.9);
+    transition:transform .18s var(--be-ease-out),box-shadow .18s var(--be-ease-out),background .18s var(--be-ease-out);}
+  .shop-jump a:hover{background:var(--be-sky-50);transform:translateY(-2px);
+    box-shadow:0 14px 26px -10px rgba(1,14,25,.7), inset 0 1px 0 rgba(255,255,255,.9);}
+  .shop-jump a:focus-visible{outline:2px solid #fff;outline-offset:3px;}
+  @media(prefers-reduced-motion:reduce){.shop-jump a:hover{transform:none;}}
 
   .shop-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(270px,1fr));gap:22px;margin-top:42px;}
   .shop-card{display:flex;flex-direction:column;background:#fff;border:1px solid var(--be-border,rgba(4,79,125,.14));
@@ -108,7 +113,7 @@
   .feat-pack{display:grid;grid-template-columns:1.15fr 1fr;gap:0;border-radius:22px;overflow:hidden;text-decoration:none;box-shadow:0 24px 60px -34px rgba(2,27,46,.55);border:1px solid rgba(4,79,125,.10);}
   @media(max-width:760px){.feat-pack{grid-template-columns:1fr;}.feat-pack .feat-img{min-height:200px;order:-1;}}
 </style>
-<section class="section bg-white" data-screen-label="Book — Featured event" style="padding-bottom:0;">
+<section class="section bg-white" data-screen-label="Book — Featured event">
   <div class="container">
     <a class="reveal feat-pack" href="november-2026.html">
       <div style="background:linear-gradient(135deg,#021B2E 0%,#033C62 55%,#044F7D 100%);padding:clamp(28px,4vw,52px);color:#fff;">
@@ -117,7 +122,7 @@
         <p style="color:rgba(255,255,255,.82);font-size:16px;line-height:1.55;max-width:46ch;margin:0;">The AIDA depth competition on the world stage. Get the full event pack — dates, packages, safety, travel — then register &amp; pay. Entry from $850 incl. official training.</p>
         <span class="btn btn-teal btn-lg" style="margin-top:26px;pointer-events:none;">Get the event pack →</span>
       </div>
-      <div class="feat-img" style="position:relative;min-height:240px;"><img src="assets/media/clean/comp-hero-descent.jpg" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:60% 45%;" alt="A freediver descends the competition line into deep blue water in Soufrière Bay" /></div>
+      <div class="feat-img" style="position:relative;min-height:240px;"><img src="assets/media/clean/comp-hero-descent.jpg" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:50% 50%;" alt="A freediver descends the competition line into deep blue water in Soufrière Bay" /></div>
     </a>
   </div>
 </section>
