@@ -830,3 +830,55 @@ html.anim .reveal.d1 { transition-delay: .08s; } html.anim .reveal.d2 { transiti
 .sk i { width: 26px; height: 13px; border-radius: 4px; display: block; }
 .season-note { margin-top: 16px; font-size: 13px; color: var(--be-text-soft); max-width: 62ch; }
 @media (prefers-reduced-motion: reduce) { .sm-grid a.d:hover { transform: none; } }
+
+/* ---- Competition interest modal (comp-interest.js) ---- */
+.ci-modal { border: 0; padding: 0; background: transparent; max-width: min(520px, calc(100vw - 32px)); width: 100%; }
+.ci-modal::backdrop { background: rgba(2, 27, 46, .72); backdrop-filter: blur(4px); }
+.ci-form, .ci-done {
+  position: relative; background: var(--be-mist); color: var(--be-text);
+  border-radius: var(--be-radius-lg); padding: clamp(26px, 4vw, 40px);
+  box-shadow: 0 30px 80px rgba(2, 27, 46, .45);
+  display: flex; flex-direction: column; gap: 0;
+}
+/* display:flex above beats the UA [hidden] rule, so restate it */
+.ci-form[hidden], .ci-done[hidden], .ci-error[hidden] { display: none; }
+.ci-close {
+  position: absolute; top: 14px; right: 16px; width: 36px; height: 36px;
+  border: 0; background: transparent; color: var(--be-text-soft);
+  font-size: 26px; line-height: 1; border-radius: 50%; cursor: pointer;
+  transition: background var(--be-dur-fast) var(--be-ease-out), color var(--be-dur-fast) var(--be-ease-out);
+}
+.ci-close:hover { background: var(--be-sky-50); color: var(--be-ocean-blue); }
+.ci-eyebrow {
+  font-family: var(--be-font-body); font-weight: 600; font-size: 11px;
+  letter-spacing: .2em; text-transform: uppercase; color: var(--be-teal); margin: 0;
+}
+.ci-title {
+  font-family: var(--be-font-display); font-stretch: var(--be-width-display-sm);
+  text-transform: uppercase; letter-spacing: .05em; font-weight: 600;
+  font-size: clamp(21px, 3vw, 27px); color: var(--be-ocean-blue);
+  line-height: 1.14; margin: 10px 0 0;
+}
+.ci-sub { font-size: 14.5px; line-height: 1.6; color: var(--be-text-soft); margin: 12px 0 0; }
+.ci-field { display: flex; flex-direction: column; gap: 7px; margin-top: 20px; }
+.ci-field label {
+  font-family: var(--be-font-body); font-weight: 600; font-size: 11px;
+  letter-spacing: .14em; text-transform: uppercase; color: var(--be-steel-navy);
+}
+.ci-opt { font-weight: 400; letter-spacing: .08em; color: var(--be-text-soft); text-transform: none; }
+.ci-field input, .ci-field select, .ci-field textarea {
+  font-family: var(--be-font-body); font-size: 15px; color: var(--be-text);
+  background: #fff; border: 1px solid var(--be-sky-100); border-radius: 10px;
+  padding: 13px 14px; width: 100%; transition: border-color var(--be-dur-fast) var(--be-ease-out),
+    box-shadow var(--be-dur-fast) var(--be-ease-out);
+}
+.ci-field textarea { resize: vertical; min-height: 84px; line-height: 1.55; }
+.ci-field input:focus, .ci-field select:focus, .ci-field textarea:focus {
+  outline: none; border-color: var(--be-teal); box-shadow: 0 0 0 3px rgba(32, 125, 146, .16);
+}
+.ci-error { margin: 16px 0 0; font-size: 13.5px; line-height: 1.5; color: #9a2b2b; }
+.ci-submit { margin-top: 24px; width: 100%; justify-content: center; }
+.ci-submit:disabled { opacity: .6; cursor: default; transform: none; }
+.ci-note { margin: 14px 0 0; font-size: 12.5px; color: var(--be-text-soft); text-align: center; }
+.ci-done .btn { margin-top: 26px; align-self: flex-start; }
+@media (max-width: 520px) { .ci-form, .ci-done { padding: 24px 20px 26px; } }
