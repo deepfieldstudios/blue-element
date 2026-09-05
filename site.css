@@ -882,3 +882,21 @@ html.anim .reveal.d1 { transition-delay: .08s; } html.anim .reveal.d2 { transiti
 .ci-note { margin: 14px 0 0; font-size: 12.5px; color: var(--be-text-soft); text-align: center; }
 .ci-done .btn { margin-top: 26px; align-self: flex-start; }
 @media (max-width: 520px) { .ci-form, .ci-done { padding: 24px 20px 26px; } }
+
+/* ---- Book page enquiry band (book.html) ---- */
+.book-enquire { background: var(--be-abyss); padding: clamp(30px, 4vw, 48px) 0; }
+.enq {
+  display: grid; grid-template-columns: minmax(0, 1fr) auto; align-items: center;
+  gap: clamp(20px, 3vw, 48px);
+}
+.enq-copy h2 {
+  font-family: var(--be-font-display); font-stretch: var(--be-width-display-sm);
+  text-transform: uppercase; letter-spacing: .05em; font-weight: 600;
+  font-size: clamp(20px, 2.4vw, 28px); line-height: 1.16; color: #fff; margin: 12px 0 0;
+}
+.enq-copy p { margin: 12px 0 0; font-size: 14.5px; line-height: 1.6; color: var(--be-sky-blue); max-width: 60ch; }
+.enq-btn { flex: none; white-space: nowrap; font-size: 15px; padding: 18px 38px; }
+@media (max-width: 760px) {
+  .enq { grid-template-columns: 1fr; }
+  .enq-btn { width: 100%; justify-content: center; }
+}
