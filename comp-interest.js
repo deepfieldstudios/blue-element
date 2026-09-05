@@ -36,7 +36,7 @@
   var COMPS = [
     { id: 'nov-2026',    label: 'Blue Element · November — Nov 8–17, 2026' },
     { id: 'inv-2026',    label: 'Blue Element Invitational — Nov 20–24, 2026' },
-    { id: 'mini-2027',   label: 'Blue Element March Mini — Mar 18–23, 2027' },
+    { id: 'mini-2027',   label: 'Blue Element March Mini — Mar 19–23, 2027' },
     { id: 'may-2027',    label: 'Blue Element May · Open — May 8–17, 2027' },
     { id: 'undecided',   label: 'Not sure yet / more than one' }
   ];

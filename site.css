@@ -758,6 +758,9 @@ html.anim .reveal.d1 { transition-delay: .08s; } html.anim .reveal.d2 { transiti
 .cal-tags .badge { background: var(--be-sky-50); color: var(--be-ocean-blue); font-size: 10px; padding: 6px 11px; }
 .cal-tags .badge.wr { background: var(--be-ocean-blue); color: #fff; }
 .cal-tags .badge.home { background: var(--be-teal); color: #fff; }
+.cal-tags .badge.closed { background: var(--be-sand); color: #33301f; }
+.cal-row.closed { background: linear-gradient(90deg, rgba(177,163,139,.16), rgba(177,163,139,0) 70%); box-shadow: inset 3px 0 0 var(--be-sand); }
+.cal-row.closed:hover { background: linear-gradient(90deg, rgba(177,163,139,.24), rgba(177,163,139,0) 70%); }
 
 /* ---------- sponsorship tiers ---------- */
 .tier-incl { list-style: none; margin: 16px 0 0; padding: 0; display: flex; flex-direction: column; gap: 11px; }
@@ -808,6 +811,7 @@ html.anim .reveal.d1 { transition-delay: .08s; } html.anim .reveal.d2 { transiti
 
 /* ---- Season grid (calendar.html) ---- */
 .season { --cal-comp: var(--be-ocean-blue); --cal-camp: var(--be-surface-teal); --cal-course: #cdd4a6;
+  --cal-closed: var(--be-sand);
   margin-top: clamp(36px, 4vw, 56px); }
 .season-months { display: grid; grid-template-columns: repeat(auto-fit, minmax(228px, 1fr));
   gap: clamp(22px, 2.8vw, 38px); }
@@ -827,6 +831,15 @@ html.anim .reveal.d1 { transition-delay: .08s; } html.anim .reveal.d2 { transiti
 .d.is-comp { background: var(--cal-comp); color: #fff; }
 .d.is-camp { background: var(--cal-camp); color: #fff; }
 .d.is-course { background: var(--cal-course); color: var(--be-dark-olive); }
+/* Blocked-out days are hatched as well as tinted: sand and the courses sage are
+   both muted warm tones, and at 31px the stripe is what tells them apart. */
+.d.is-closed { color: #33301f; cursor: default;
+  background-color: var(--cal-closed);
+  background-image: repeating-linear-gradient(45deg,
+    rgba(255,255,255,.34) 0 2px, rgba(255,255,255,0) 2px 5px); }
+.sk i.sk-closed { background-color: var(--cal-closed);
+  background-image: repeating-linear-gradient(45deg,
+    rgba(255,255,255,.34) 0 2px, rgba(255,255,255,0) 2px 5px); }
 .season-key { display: flex; flex-wrap: wrap; gap: 12px 28px; align-items: center;
   margin-top: clamp(30px, 3.2vw, 44px); }
 .sk { display: inline-flex; align-items: center; gap: 9px; font-family: var(--be-font-body);
