@@ -44,6 +44,31 @@
   .buy-row:first-child{border-top:0;}
   .buy-row .tier{font-size:14px;color:var(--be-ink,#15293f);font-weight:600;}
   .buy-row .price-sm{font-size:17px;font-weight:800;color:var(--be-ocean-blue,#044f7d);}
+
+  /* ---- Training tiers: the brand's surface-to-abyss gradient, so the cards
+         read against the light ground instead of dissolving into it ---- */
+  .tiers{grid-template-columns:repeat(auto-fit,minmax(320px,1fr));}
+  .tier-card{position:relative;overflow:hidden;border:1px solid rgba(178,207,216,.24);
+    background:linear-gradient(158deg,#0b4d73 -12%,#053e63 34%,#021b2e 100%);
+    box-shadow:0 26px 56px -24px rgba(2,27,46,.62);}
+  .tier-card::before{content:"";position:absolute;top:0;left:0;right:0;height:3px;
+    background:linear-gradient(90deg,var(--be-surface-teal,#2a93a8),rgba(42,147,168,0));}
+  .tier-card .lvl{color:var(--be-surface-teal,#2a93a8);}
+  .tier-card h3{color:#fff;}
+  .tier-card p{color:var(--be-sky-blue,#b2cfd8);}
+  .tier-card .buy-row{border-top-color:rgba(178,207,216,.18);}
+  .tier-card .buy-row .tier{color:#fff;}
+  .tier-card .buy-row .price-sm{color:#fff;}
+  .tier-card .shop-buy{background:var(--be-surface-teal,#2a93a8);color:var(--be-abyss,#021b2e);
+    font-weight:700;border:0;}
+  .tier-card .shop-buy.is-enquire{background:var(--be-surface-teal,#2a93a8);
+    border:0;color:var(--be-abyss,#021b2e);}
+  .tier-card .shop-buy:hover{background:#fff;color:var(--be-ocean-blue,#044f7d);}
+  .tier-card.featured{border-color:rgba(42,147,168,.75);
+    box-shadow:0 26px 56px -24px rgba(2,27,46,.62),0 0 0 1px rgba(42,147,168,.35);}
+  .tier-flag{position:absolute;top:18px;right:18px;font-size:10px;letter-spacing:.16em;
+    text-transform:uppercase;font-weight:700;padding:5px 11px;border-radius:999px;
+    background:var(--be-surface-teal,#2a93a8);color:var(--be-abyss,#021b2e);}
 </style>
 <!-- Icons & PWA -->
 <link rel="icon" href="/favicon.ico" sizes="any" />
@@ -189,9 +214,9 @@
       <h2 class="display">Training</h2>
       <p class="lead">Already trained and want platform time? Book supported access by the day, week or month — from self-guided buddy sessions to full competition-grade elite support.</p>
     </div>
-    <div class="shop-grid" style="grid-template-columns:repeat(auto-fill,minmax(320px,1fr));">
+    <div class="shop-grid tiers">
 
-      <article class="shop-card reveal">
+      <article class="shop-card tier-card reveal">
         <span class="lvl">Self-guided</span>
         <h3>Autonomous Platform Access</h3>
         <p>Counter-ballasted mainline to 145m, set depths and a supervising buddy safety system — you run your session, we provide the safety net.</p>
@@ -202,7 +227,8 @@
         </div>
       </article>
 
-      <article class="shop-card reveal">
+      <article class="shop-card tier-card featured reveal">
+        <span class="tier-flag">Deepest support</span>
         <span class="lvl">Full support</span>
         <h3>Elite Support</h3>
         <p>Counter-ballast recovery, staged in-water safety and deco O₂ included, with optional coaching, sonar and video review — for deep performance and record attempts.</p>
