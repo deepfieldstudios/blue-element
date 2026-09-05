@@ -686,8 +686,12 @@ html.anim .reveal.d1 { transition-delay: .08s; } html.anim .reveal.d2 { transiti
 /* ---------- crew (staff) ---------- */
 .crew-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: clamp(20px, 2.2vw, 30px); }
 .crew-card { background: #fff; border: 1px solid var(--be-border-ink); border-radius: var(--be-radius-lg); overflow: hidden; display: flex; flex-direction: column; box-shadow: var(--be-shadow-md); }
-.crew-media { aspect-ratio: 4 / 4.4; background: var(--be-mist); }
-.crew-media image-slot { width: 100%; height: 100%; }
+/* position:relative + inset:0 child, as .split-media and .tc-media do: an <img>
+   carrying width/height brings its own intrinsic ratio, which otherwise beats
+   the container's aspect-ratio and stretches the card. */
+.crew-media { aspect-ratio: 4 / 4.4; background: var(--be-mist); position: relative; }
+.crew-media > img { position: absolute; inset: 0;
+  width: 100%; height: 100%; object-fit: cover; display: block; }
 .crew-body { padding: clamp(20px, 1.8vw, 28px); display: flex; flex-direction: column; }
 .crew-body h3 { font-family: var(--be-font-display); font-stretch: var(--be-width-display-sm); font-size: clamp(20px, 1.7vw, 25px); color: var(--be-ocean-blue); line-height: 1.1; }
 .crew-role { margin-top: 8px; font-size: 11.5px; letter-spacing: .1em; text-transform: uppercase; font-weight: 600; color: var(--be-teal); line-height: 1.5; }
@@ -917,4 +921,17 @@ html.anim .reveal.d1 { transition-delay: .08s; } html.anim .reveal.d2 { transiti
 @media (max-width: 760px) {
   .enq { grid-template-columns: 1fr; }
   .enq-btn { width: 100%; justify-content: center; }
+}
+
+/* ---- Portrait awaiting a photo (about.html crew, camps.html guest coach) ----
+   A branded holding block, not an editing affordance: the page reads finished
+   and swapping in the real portrait is a one-line change. */
+.photo-pending {
+  width: 100%; height: 100%; display: flex; align-items: center; justify-content: center;
+  background: linear-gradient(158deg, #0b4d73 -12%, #053e63 40%, #021b2e 100%);
+}
+.photo-pending span {
+  font-family: var(--be-font-display); font-stretch: var(--be-width-display-sm);
+  font-weight: 600; font-size: clamp(28px, 4vw, 40px); letter-spacing: .1em;
+  color: rgba(178, 207, 216, .38);
 }
