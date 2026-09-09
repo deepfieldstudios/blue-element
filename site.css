@@ -28,7 +28,12 @@ body {
   text-rendering: optimizeLegibility;
   overflow-x: hidden;
 }
-img { display: block; max-width: 100%; }
+/* height:auto is not optional. The width/height attributes on an <img> apply as
+   CSS presentational hints, so without this a rule that overrides only the width
+   (.gal-grid img { width:100% }) leaves the height hint standing — every gallery
+   image rendered 236px wide by its literal attribute height, e.g. 236x1769.
+   Rules that genuinely need a height set it via a class selector and still win. */
+img { display: block; max-width: 100%; height: auto; }
 a { color: inherit; text-decoration: none; }
 h1, h2, h3, h4, p { margin: 0; }
 ::selection { background: var(--be-teal); color: #fff; }
