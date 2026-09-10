@@ -1142,3 +1142,52 @@ html.anim .reveal.d1 { transition-delay: .08s; } html.anim .reveal.d2 { transiti
 .ev-tally .t span { display: block; margin-top: 9px; font-size: 9.5px; letter-spacing: .16em;
   text-transform: uppercase; color: var(--be-sky-blue); font-weight: 600; }
 @media (max-width: 640px) { .ev-tally { grid-template-columns: repeat(2, minmax(0, 1fr)); row-gap: 26px; } }
+
+/* ============================================================================
+   LEGAL PAGES (terms.html)
+   Plain, scannable, high-contrast. A policy is read to find one clause, so the
+   numbering and the anchors matter more than the styling.
+   ========================================================================= */
+.legal { max-width: 760px; }
+.legal h2 { font-family: var(--be-font-display); font-stretch: var(--be-width-display);
+  text-transform: uppercase; letter-spacing: .07em; font-weight: var(--be-w-display);
+  font-size: clamp(19px, 2.2vw, 26px); color: var(--be-ocean-blue);
+  margin-top: clamp(44px, 5vw, 64px); padding-top: clamp(22px, 2.6vw, 30px);
+  border-top: 1px solid var(--be-border-ink); scroll-margin-top: 120px; }
+.legal h2:first-of-type { margin-top: 0; border-top: 0; padding-top: 0; }
+.legal h3 { font-size: 15.5px; font-weight: 700; color: var(--be-ocean-blue);
+  margin-top: 30px; letter-spacing: .01em; }
+.legal p { color: var(--be-text-soft); font-size: 16px; line-height: 1.72; margin-top: 14px; }
+.legal ul { margin: 14px 0 0; padding-left: 0; list-style: none; }
+.legal li { position: relative; padding-left: 22px; margin-top: 11px;
+  color: var(--be-text-soft); font-size: 16px; line-height: 1.7; }
+.legal li::before { content: ""; position: absolute; left: 4px; top: 11px;
+  width: 5px; height: 5px; border-radius: 50%; background: var(--be-teal); }
+.legal strong { color: var(--be-ocean-blue); font-weight: 700; }
+.legal a { color: var(--be-teal); text-decoration: underline; text-underline-offset: 2px; }
+.legal-updated { font-size: 12.5px; letter-spacing: .13em; text-transform: uppercase;
+  font-weight: 600; color: var(--be-text-soft); }
+/* the refund tiers, stated as a table because that is how they get read */
+.legal-tiers { width: 100%; border-collapse: collapse; margin-top: 20px; font-size: 15px; }
+.legal-tiers th { text-align: left; font-size: 10.5px; letter-spacing: .16em;
+  text-transform: uppercase; color: var(--be-teal); font-weight: 700;
+  padding: 0 14px 11px 0; border-bottom: 1px solid var(--be-border-ink); }
+.legal-tiers td { padding: 13px 14px 13px 0; border-bottom: 1px solid rgba(0,0,0,.07);
+  color: var(--be-text-soft); line-height: 1.55; vertical-align: top; }
+.legal-tiers td:first-child { color: var(--be-ocean-blue); font-weight: 600; white-space: nowrap; }
+.legal-tiers td:last-child { padding-right: 0; }
+.legal-toc { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 26px; }
+.legal-toc a { font-size: 12px; letter-spacing: .07em; font-weight: 600; text-decoration: none;
+  border: 1px solid var(--be-border-ink); border-radius: var(--be-radius-pill);
+  padding: 8px 15px; color: var(--be-text-soft); }
+.legal-toc a:hover { border-color: var(--be-teal); color: var(--be-teal); }
+.legal-note { margin-top: 26px; padding: 18px 20px; border-left: 3px solid var(--be-teal);
+  background: rgba(42,147,168,.06); border-radius: 0 var(--be-radius-sm) var(--be-radius-sm) 0; }
+.legal-note p { margin-top: 0; }
+@media (max-width: 560px) {
+  .legal-tiers, .legal-tiers tbody, .legal-tiers tr, .legal-tiers td { display: block; width: 100%; }
+  .legal-tiers thead { display: none; }
+  .legal-tiers tr { padding: 14px 0; border-bottom: 1px solid rgba(0,0,0,.07); }
+  .legal-tiers td { border: 0; padding: 3px 0; }
+  .legal-tiers td:first-child { font-size: 15px; }
+}
