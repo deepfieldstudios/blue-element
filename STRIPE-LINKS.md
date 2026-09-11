@@ -4,10 +4,9 @@
 > in the Stripe dashboard that day and pasted into `shop-links.js`. Nothing is
 > outstanding. Keep this file as the map of slot id → product → price.
 
-Six buttons on the live site currently say **Enquire** and send an email instead of
-taking payment. They are already wired; each one needs a Stripe Payment Link
-pasted into its slot in `shop-links.js` and it goes live immediately, with no
-code change.
+Each buy button on the site carries a `data-buy` slot id. `shop-links.js` maps
+that id to a Stripe Payment Link; if a slot is ever empty the button falls back
+to an enquiry email and relabels itself "Enquire".
 
 Prices below are taken from the live pages — they are what a customer is being
 shown today. **If any of them is wrong, fix the page as well as the link.**
@@ -87,7 +86,7 @@ These fifteen are live and working. Listed so nothing gets duplicated.
 - Paste into `shop-links.js`, commit, push. The buttons change on their own —
   `shop-links.js` swaps the href and relabels "Enquire" → "Book Now".
 - Check one live: the button should go to `buy.stripe.com`, not open an email.
-- Add the refund policy URL in **Settings → Business details**:
+- Still outstanding: add the refund policy URL in **Settings → Business details**:
   `https://blueelementstore.com/terms.html`
   Stripe shows it at checkout and it is the single best defence against chargebacks.
 
