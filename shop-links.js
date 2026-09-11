@@ -14,7 +14,7 @@ window.STRIPE_LINKS = {
   'course-nolimits': 'https://buy.stripe.com/aFacN4gJx4IF8u4eZodby09',
   'course-instructor': 'https://buy.stripe.com/cNi8wO78XdfbfWw8B0dby0a',
   'eq-clinic': 'https://buy.stripe.com/14AdR864Tdfb9y85oOdby0b',
-  'coaching-private': '',            // <-- 1:1 private coaching, $95 half day. Paste the Payment Link here.
+  'coaching-private': 'https://buy.stripe.com/8x2aEW50P5MJfWwdVkdby0f',
   'camp-week': 'https://buy.stripe.com/6oU00ibpd2AxeSs18ydby0c',
   'retreat-matt-hill': 'https://buy.stripe.com/00w8wO8d17UR25GcRgdby0d',
   'comp-nov-aida': 'https://book.stripe.com/14A5kC50Pa2Z39KdVkdby00',
@@ -22,11 +22,11 @@ window.STRIPE_LINKS = {
   'comp-nov-cmas': 'https://book.stripe.com/dRm6oGcthejffWw6sSdby01',
   'comp-mar-aida': 'https://book.stripe.com/5kQ6oG9h5grn6lWg3sdby02',
   'comp-may-open': 'https://book.stripe.com/eVq6oG0Kz8YVh0AcRgdby03',
-  'train-auto-day': '',
-  'train-auto-week': '',
-  'train-auto-month': '',
-  'train-elite-day': '',
-  'train-elite-month': ''
+  'train-auto-day': 'https://buy.stripe.com/4gM9AS8d15MJaCceZodby0g',
+  'train-auto-week': 'https://buy.stripe.com/fZu6oGctha2Z4dO7wWdby0h',
+  'train-auto-month': 'https://buy.stripe.com/fZu6oG1OD8YV39K4kKdby0i',
+  'train-elite-day': 'https://buy.stripe.com/aFa7sK8d18YVaCc7wWdby0j',
+  'train-elite-month': 'https://buy.stripe.com/aFa8wO8d1b734dO8B0dby0k',
 };
 (function () {
   var MAIL = 'blueelementfreediving@gmail.com';
