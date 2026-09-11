@@ -100,18 +100,25 @@ These fifteen are live and working. Listed so nothing gets duplicated.
 - **Collect customer names: on.** A booking that arrives as an email address and
   an amount is very hard to administer. The older fifteen do not collect names —
   worth turning on for them too.
-- **Collect tax automatically: left at Stripe's default (on).** It adds nothing
-  today: the account has no tax registrations, and a live checkout was confirmed
-  showing `Tax EC$0.00`. If a UK VAT registration is ever added, this would start
-  applying 20% VAT — the account's head office is set to the United Kingdom.
+- **Collect tax automatically: OFF** (turned off 11 Sep on all six). It was
+  adding nothing today — no tax registrations exist — but the products are
+  tax-*exclusive*, so any future registration would have added tax **on top** of
+  the advertised price. With it off, $95 is $95. Verified on the live checkout:
+  the Tax row is gone entirely. **The older fifteen links still have it on** and
+  should be turned off the same way.
 
 ## Two things worth a decision
 
-1. **Checkout offers EC$ first.** The default currency shown is East Caribbean
-   dollars at a rate that "includes a 3% conversion fee" (the camp link quoted
-   4%). A customer sees EC$263.04 before they see US$95.00. The USD option is
-   right there, but the first number they read is not the one on the website.
-   This is Stripe's Adaptive Pricing — it can be turned off per price.
+1. **Checkout offers EC$ first, and this cannot be changed from the dashboard.**
+   The default currency shown is East Caribbean dollars at a rate that "includes
+   a 4% conversion fee" — a customer sees EC$265.59 before US$95.00. This is
+   Stripe's Adaptive Pricing. Under Settings → Payments → Adaptive Pricing it is
+   listed as **"Payment Links and Managed Payments — Always on"** with no toggle;
+   the switch on that page only governs Checkout, Elements and the Hosted Invoice
+   Page. The supported-currency list is informational, with no per-currency
+   controls. To force USD only you would need either Stripe support to disable it
+   on the account, or the API (`adaptive_pricing[enabled]=false`), which needs a
+   secret key.
 2. **Head office is United Kingdom.** Blue Element Freediving Inc. is a Dominica
    company, and the terms say Dominica law. Worth checking that the Stripe
    business address is what you want it to be.
