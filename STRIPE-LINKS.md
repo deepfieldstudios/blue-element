@@ -157,3 +157,54 @@ Written down because several changes silently failed the first time:
   nothing, and the only clue is the browser's "Leave site?" warning.
 - A save has landed only when the URL drops the `/edit` suffix. Verify by
   reloading the edit page, not by assuming the click worked.
+
+---
+
+## Quantity selectors — agreed 11 Sep, not yet applied
+
+Every link gets "Let customers adjust quantity" turned on. Two settings only:
+
+**Maximum 4** (13 links)
+
+| Stripe product | Slot |
+|---|---|
+| Introduction to Freediving | `course-try` |
+| Freediver course at Blue Element | `course-freediver` |
+| Advanced Freediver course at Blue Element | `course-advanced` |
+| Master Freediver at Blue Element | `course-master` |
+| AIDA Vertical Blue Safety course | `course-vb-safety` |
+| Instructor course at Blue Element | `course-instructor` |
+| Blue Element November | `comp-nov-aida` |
+| Blue Element November 2026 — Entry + 1 month training | `comp-nov-aida-training` |
+| Blue Element November Invitational | `comp-nov-cmas` |
+| Blue Element March mini | `comp-mar-aida` |
+| Blue Element May Open | `comp-may-open` |
+| Blue Element Camp | `camp-week` |
+| Matt Hill depth camp | `retreat-matt-hill` |
+
+**Unlimited** (8 links) — maximum 99, Stripe's ceiling
+
+| Stripe product | Slot |
+|---|---|
+| No Limits freediving course | `course-nolimits` |
+| Advanced EQ Clinic | `eq-clinic` |
+| Private Coaching — Half Day | `coaching-private` |
+| Autonomous Platform Access — Daily / Weekly / Monthly | `train-auto-day` / `-week` / `-month` |
+| Elite Support — Daily / Monthly | `train-elite-day` / `train-elite-month` |
+
+### Why comps and camps are 4, not their field size
+
+Stripe's quantity maximum caps **one transaction**, not total sales. It does not
+reserve seats. Setting March Mini to 20 would let one booking take the whole
+field *and* let the next customer buy 20 more — Stripe will not block the 21st
+sale on a 20-athlete field. A max of 4 covers the real case (someone entering
+themselves plus teammates) without one transaction consuming or overselling the
+field. **Entry numbers still have to be watched manually.**
+
+### Field sizes, for reference
+
+November 2026 **42** · November Invitational **12** · March Mini **20** ·
+May Open **30** · December Depth Camp **9** · Matt Hill camp 16-payment link cap.
+
+The 42 is not currently stated anywhere on the site — the other three
+competition pages show their athlete count in the hero, November does not.
