@@ -100,12 +100,11 @@ These fifteen are live and working. Listed so nothing gets duplicated.
 - **Collect customer names: on.** A booking that arrives as an email address and
   an amount is very hard to administer. The older fifteen do not collect names —
   worth turning on for them too.
-- **Collect tax automatically: OFF** (turned off 11 Sep on all six). It was
-  adding nothing today — no tax registrations exist — but the products are
+- **Collect tax automatically: OFF on all 21 links** (11 Sep). It was adding
+  nothing today — no tax registrations exist — but the newer products are
   tax-*exclusive*, so any future registration would have added tax **on top** of
   the advertised price. With it off, $95 is $95. Verified on the live checkout:
-  the Tax row is gone entirely. **The older fifteen links still have it on** and
-  should be turned off the same way.
+  the Tax row is gone entirely.
 
 ## Two things worth a decision
 
@@ -122,3 +121,39 @@ These fifteen are live and working. Listed so nothing gets duplicated.
 2. **Head office is United Kingdom.** Blue Element Freediving Inc. is a Dominica
    company, and the terms say Dominica law. Worth checking that the Stripe
    business address is what you want it to be.
+
+
+---
+
+## Account settings changed on 11 September 2026
+
+- **Terms of service URL** set to `https://blueelementstore.com/terms.html` under
+  Settings → Business → Business details → Customer-facing information. Stripe
+  has no separate "refund policy" field; the terms page carries the refund policy
+  as section 2, so this is the right home for it. Stripe surfaces it at checkout.
+- Nothing else in account settings was touched.
+
+## Two notes for whoever picks this up next
+
+- **Customer support email is still blank** in that same dialog. Stripe asks for
+  it specifically because it reduces disputes — worth 30 seconds.
+- **The business address on the Stripe account is in Woodstock, Oxfordshire.**
+  Blue Element Freediving Inc. is a Dominica company and the published terms say
+  Dominica law. That mismatch is why Stripe Tax was defaulting to UK VAT at 20%.
+  Tax collection is now off everywhere so it costs nothing today, but the address
+  is worth a look.
+
+## Driving the Stripe dashboard — what actually works
+
+Written down because several changes silently failed the first time:
+
+- `form_input` on a checkbox changes the DOM but does **not** fire the event
+  Stripe's React form listens for. The form state never changes and "Update link"
+  saves nothing, with no error. Use a real click on the **label** instead.
+- The first click on a freshly loaded edit page often does not register. Click,
+  screenshot to confirm the checkbox actually moved, and only then save.
+- Element refs change every time the page re-renders. Re-run `find` for the
+  "Update link" button immediately before clicking it — a stale ref clicks
+  nothing, and the only clue is the browser's "Leave site?" warning.
+- A save has landed only when the URL drops the `/edit` suffix. Verify by
+  reloading the edit page, not by assuming the click worked.
