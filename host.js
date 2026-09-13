@@ -27,7 +27,7 @@
     { id: 'snorkel',  name: 'Guided snorkeling trip (incl. transport)', tag: 'per person', unit: 'pp', price: 35, qlbl: 'trips', qty: 0 },
     { id: 'waterfall',name: 'Half-day waterfall excursion', tag: 'per person', unit: 'pp', price: 55, qlbl: 'trips', qty: 0 },
     { id: 'dinner',   name: 'Catered group sunset dinner (excl. alcohol)', tag: 'per person', unit: 'pp', price: 35, qlbl: 'dinners', qty: 0 },
-    { id: 'gear',     name: 'One-week gear rental', unit: 'flat', price: 55, qlbl: 'weeks', qty: 0 }
+    { id: 'gear',     name: 'One-week gear rental', tag: 'per person', unit: 'pp', price: 55, qlbl: 'weeks', qty: 0 }
   ];
 
   var menu = document.getElementById('hm-menu');
