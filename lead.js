@@ -1,6 +1,6 @@
 /* ============================================================
    BLUE ELEMENT — Email capture + event-pack unlock (shared)
-   Used by every gated event page (November, Invitational, March
+   Used by every gated event page (November, March
    Mini, May Open). Captures the visitor's email, subscribes them
    to your list so your provider auto-emails the pack, then unlocks
    the hidden pack content on the page.

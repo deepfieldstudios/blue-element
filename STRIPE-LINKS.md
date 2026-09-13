@@ -75,7 +75,6 @@ These fifteen are live and working. Listed so nothing gets duplicated.
 | `retreat-matt-hill` | BE × Matt Hill retreat | — |
 | `comp-nov-aida` | November 2026 entry | $850 |
 | `comp-nov-aida-training` | November 2026 entry + 1 month training | $1100 |
-| `comp-nov-cmas` | November 2026 CMAS entry | — |
 | `comp-mar-aida` | March Mini 2027 entry | $600 |
 | `comp-may-open` | May Open 2027 entry | $850 |
 
@@ -176,7 +175,6 @@ Every link gets "Let customers adjust quantity" turned on. Two settings only:
 | Instructor course at Blue Element | `course-instructor` |
 | Blue Element November | `comp-nov-aida` |
 | Blue Element November 2026 — Entry + 1 month training | `comp-nov-aida-training` |
-| Blue Element November Invitational | `comp-nov-cmas` |
 | Blue Element March mini | `comp-mar-aida` |
 | Blue Element May Open | `comp-may-open` |
 | Blue Element Camp | `camp-week` |
@@ -203,7 +201,7 @@ field. **Entry numbers still have to be watched manually.**
 
 ### Field sizes, for reference
 
-November 2026 **42** · November Invitational **12** · March Mini **20** ·
+November 2026 **42** · March Mini **20** ·
 May Open **30** · December Depth Camp **9** · Matt Hill camp 16-payment link cap.
 
 The 42 is not currently stated anywhere on the site — the other three
