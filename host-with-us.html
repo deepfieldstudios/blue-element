@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Host with us — Blue Element, Dominica</title>
+<meta name="description" content="Instructors & coaches: bring your camp to the Blue Element platform in Soufrière, Dominica. Build your package from our platform, safety, media, yoga and excursions — see a live total and send it over for a quote." />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,400..800&amp;display=swap" />
+<link rel="stylesheet" href="site.css" />
+<!-- Icons & PWA -->
+<link rel="icon" href="/favicon.ico" sizes="any" />
+<link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon/favicon-32x32.png" />
+<link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon/favicon-16x16.png" />
+<link rel="apple-touch-icon" sizes="180x180" href="/assets/favicon/apple-touch-icon.png" />
+<link rel="manifest" href="/site.webmanifest" />
+<meta name="theme-color" content="#021b2e" />
+<link rel="canonical" href="https://blueelementstore.com/host-with-us.html" />
+<!-- Open Graph -->
+<meta property="og:type" content="website" />
+<meta property="og:site_name" content="Blue Element Freediving" />
+<meta property="og:title" content="Host with us — Blue Element, Dominica" />
+<meta property="og:description" content="Instructors & coaches: bring your camp to the Blue Element platform. Build your package and send it over for a quote." />
+<meta property="og:url" content="https://blueelementstore.com/host-with-us.html" />
+<meta property="og:image" content="https://blueelementstore.com/assets/media/og-default.jpg" />
+<meta property="og:image:width" content="1200" />
+<meta property="og:image:height" content="630" />
+<meta property="og:image:alt" content="Blue Element Freediving — Soufrière, Dominica" />
+<!-- Twitter -->
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="Host with us — Blue Element, Dominica" />
+<meta name="twitter:description" content="Instructors & coaches: bring your camp to the Blue Element platform. Build your package and send it over for a quote." />
+<meta name="twitter:image" content="https://blueelementstore.com/assets/media/og-default.jpg" />
+
+<style>
+/* ===== Host-with-us matrix ===== */
+.hm-guests{display:flex;align-items:center;gap:18px;flex-wrap:wrap;background:var(--be-ocean-blue);color:#fff;border-radius:16px;padding:20px 24px;margin-top:clamp(24px,3vw,34px);}
+.hm-guests .lbl{font-weight:700;font-size:17px;}
+.hm-guests .sub{font-size:13px;color:var(--be-sky-blue);}
+.hm-menu{margin-top:22px;border:1px solid rgba(4,79,125,.14);border-radius:18px;overflow:hidden;background:#fff;}
+.hm-row{display:grid;grid-template-columns:1fr auto auto 120px;align-items:center;gap:16px;padding:16px 22px;border-bottom:1px solid rgba(4,79,125,.08);}
+.hm-row:last-child{border-bottom:0;}
+.hm-row.on{background:var(--be-mist);}
+.hm-name{font-weight:600;color:var(--be-ocean-blue);font-size:15.5px;line-height:1.35;}
+.hm-tag{display:inline-block;margin-left:8px;font-size:11px;font-weight:700;letter-spacing:.04em;text-transform:uppercase;color:var(--be-teal);background:rgba(32,125,146,.10);border-radius:999px;padding:2px 8px;vertical-align:middle;}
+.hm-unit{color:var(--be-text-soft);font-size:14px;white-space:nowrap;text-align:right;min-width:96px;}
+.hm-line{font-weight:800;color:var(--be-ocean-blue);text-align:right;font-variant-numeric:tabular-nums;}
+.hm-line.zero{color:var(--be-text-soft);font-weight:600;opacity:.5;}
+.stepper{display:inline-flex;align-items:center;border:1px solid rgba(4,79,125,.22);border-radius:999px;overflow:hidden;}
+.stepper button{width:34px;height:34px;border:0;background:#fff;color:var(--be-ocean-blue);font-size:20px;line-height:1;cursor:pointer;transition:background .15s;}
+.stepper button:hover{background:var(--be-mist);}
+.stepper .q{min-width:30px;text-align:center;font-weight:700;color:var(--be-ocean-blue);font-variant-numeric:tabular-nums;}
+.stepper .qlbl{font-size:10px;color:var(--be-text-soft);padding:0 8px 0 2px;text-transform:uppercase;letter-spacing:.04em;}
+@media(max-width:720px){
+  .hm-row{grid-template-columns:1fr auto;grid-template-areas:"name line" "unit qty";row-gap:12px;}
+  .hm-name{grid-area:name;} .hm-line{grid-area:line;} .hm-unit{grid-area:unit;text-align:left;} .hm-row .stepper{grid-area:qty;justify-self:end;}
+}
+/* contact + bar */
+.hm-contact{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:26px;}
+.hm-contact .full{grid-column:1 / -1;}
+.hm-contact label{display:block;font-size:13px;font-weight:700;color:var(--be-ocean-blue);margin-bottom:6px;}
+.hm-contact input,.hm-contact textarea{width:100%;border:1px solid rgba(4,79,125,.22);border-radius:12px;padding:13px 15px;font-size:15px;font-family:inherit;color:var(--be-abyss);background:#fff;}
+.hm-contact textarea{min-height:84px;resize:vertical;}
+@media(max-width:620px){.hm-contact{grid-template-columns:1fr;}}
+.hm-bar{position:sticky;bottom:0;z-index:6;display:flex;align-items:center;justify-content:space-between;gap:20px;flex-wrap:wrap;background:linear-gradient(135deg,#021B2E 0%,#033C62 60%,#044F7D 100%);color:#fff;border-radius:18px;padding:20px 26px;margin-top:26px;box-shadow:0 -10px 30px -18px rgba(2,27,46,.6);}
+.hm-bar .tot .k{font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--be-sky-blue);}
+.hm-bar .tot .v{font-family:var(--font-display,inherit);font-weight:800;font-size:clamp(28px,4vw,40px);line-height:1;font-variant-numeric:tabular-nums;}
+.hm-bar .tot .v small{font-size:.4em;font-weight:600;color:var(--be-sky-blue);margin-left:6px;}
+.hm-bar .acts{display:flex;gap:12px;flex-wrap:wrap;}
+.hm-note{margin-top:14px;font-size:13px;color:var(--be-text-soft);}
+.hm-msg{margin-top:16px;font-size:15px;font-weight:600;color:var(--be-teal);display:none;}
+.hm-msg.show{display:block;}
+</style>
+</head>
+<body data-page="host">
+
+<!-- ============================== HERO ============================== -->
+<section class="page-hero" data-screen-label="Host — Hero">
+  <div class="page-hero-media"><img id="heroImg" src="assets/media/clean/deep-camp.jpg" style="object-position:center 42%;" alt="A depth-camp group on the Blue Element platform in Soufrière Bay, Dominica" /></div>
+  <div class="page-hero-inner">
+    <div class="container">
+      <nav class="breadcrumb reveal"><a href="index.html">Home</a> <span class="sep">/</span> <a href="courses.html">Freedive With Us</a> <span class="sep">/</span> Host With Us</nav>
+      <h1 class="reveal d1">Host<br />With Us</h1>
+      <p class="ph-sub reveal d2">Instructors &amp; coaches — bring your camp to the calmest water in the Caribbean. Use our platform, safety team and facility, add whatever you need, and we'll take care of the rest. Build your package below and send it over for a quote.</p>
+      <div class="actions reveal d3" style="margin-top:28px;"><a class="btn btn-teal btn-lg" href="#matrix">Build your package</a></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================== FREEDIVE QUICK-NAV ============================== -->
+<section class="section bg-light section-tight" data-screen-label="Host — Explore">
+  <div class="container" style="text-align:center;">
+    <p class="eyebrow center" style="margin-bottom:18px;">Freedive with us</p>
+    <div class="freedive-nav">
+      <a class="fdn fdn-courses" href="courses.html">Courses</a>
+      <a class="fdn fdn-training" href="training.html">Training</a>
+      <a class="fdn fdn-camps" href="camps.html">Private Coaching &amp; Camps</a>
+      <a class="fdn fdn-host is-current" href="host-with-us.html">Host with us</a>
+      <a class="fdn fdn-calendar" href="calendar.html">Calendar</a>
+    </div>
+  </div>
+</section>
+
+<!-- ============================== INTRO ============================== -->
+<section class="section bg-light" data-screen-label="Host — Intro">
+  <div class="container">
+    <div class="intro-row">
+      <div class="reveal"><p class="eyebrow">Bring your group</p>
+        <h2 class="display" style="font-size:clamp(26px,3.4vw,44px);color:var(--be-ocean-blue);margin-top:16px;line-height:1.08;">Your camp,<br />our platform.</h2>
+      </div>
+      <div class="prose reveal d1">
+        <p>Run your own coaching week on a world-class setup without the logistics. You bring your athletes; we provide the counter-ballasted platform, professional safety, warm still water and everything on the menu below — from assistant instructors and media packages to yoga, excursions and catered dinners.</p>
+        <p>Everything is optional. Set your group size, choose what you need, and the total updates as you go. Hit <strong>Host with us</strong> and we'll get straight back with a quote and available dates.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================== MATRIX ============================== -->
+<section class="section bg-white" id="matrix" data-screen-label="Host — Build">
+  <div class="container">
+    <div class="section-head reveal">
+      <p class="eyebrow">Build your camp</p>
+      <h2 class="display">Pick &amp; choose.</h2>
+      <p class="lead">All offerings are optional and priced in USD. Per-person items multiply by your group size; the platform rate drops to $125 per person at six guests or more.</p>
+    </div>
+
+    <div class="hm-guests reveal">
+      <div><span class="lbl">Number of guests</span><br /><span class="sub">Drives per-person pricing &amp; the platform tier</span></div>
+      <div class="stepper" style="border-color:rgba(255,255,255,.4);">
+        <button type="button" data-guests="-1" aria-label="Fewer guests" style="background:transparent;color:#fff;">−</button>
+        <span class="q" id="guests" style="color:#fff;min-width:40px;">6</span>
+        <button type="button" data-guests="1" aria-label="More guests" style="background:transparent;color:#fff;">+</button>
+      </div>
+    </div>
+
+    <div class="hm-menu reveal" id="hm-menu"><!-- rows injected by host.js --></div>
+
+    <p class="hm-note">Prices are per week where the platform and gear are concerned. Anything not listed? Add it in the notes below and we'll price it in.</p>
+
+    <!-- Contact -->
+    <div class="section-head reveal" style="margin-top:clamp(44px,5vw,72px);">
+      <p class="eyebrow">Your details</p>
+      <h3 style="color:var(--be-ocean-blue);">Where do we send the quote?</h3>
+    </div>
+    <div class="hm-contact reveal">
+      <div><label for="hm-name">Your name</label><input id="hm-name" type="text" autocomplete="name" placeholder="First &amp; last name" /></div>
+      <div><label for="hm-email">Email</label><input id="hm-email" type="email" autocomplete="email" placeholder="you@email.com" /></div>
+      <div><label for="hm-org">Freedive school / brand (optional)</label><input id="hm-org" type="text" placeholder="e.g. Flow State Freediving" /></div>
+      <div><label for="hm-dates">Preferred dates / week</label><input id="hm-dates" type="text" placeholder="e.g. w/c 12 Jan 2027" /></div>
+      <div class="full"><label for="hm-notes">Anything else?</label><textarea id="hm-notes" placeholder="Group level, extra requests, accommodation help, questions…"></textarea></div>
+    </div>
+
+    <!-- Sticky total + submit -->
+    <div class="hm-bar reveal" id="hm-bar">
+      <div class="tot"><div class="k">Estimated total</div><div class="v" id="hm-total">$0<small>USD</small></div></div>
+      <div class="acts">
+        <button class="btn btn-teal btn-lg" type="button" id="hm-submit">Host with us →</button>
+        <a class="btn btn-ghost-light btn-lg" id="hm-whatsapp" href="https://wa.me/447554739347" target="_blank" rel="noopener">WhatsApp us</a>
+      </div>
+    </div>
+    <p class="hm-msg" id="hm-msg">Thanks — your package is ready to send. Your email app should open with everything itemised; just hit send and we'll be straight back with a quote. Prefer WhatsApp? Use the button above.</p>
+    <p class="hm-note">This sends us your selection for a quote — no charge yet. We'll confirm dates and send a secure Stripe payment link to lock it in.</p>
+  </div>
+</section>
+
+<!-- ============================== WHY HOST ============================== -->
+<section class="section bg-deep" data-screen-label="Host — Why">
+  <div class="container">
+    <div class="frow">
+      <div class="frow-media reveal"><img src="assets/media/clean/camp-aida.jpg" alt="A coach briefing a group at the Blue Element platform, rainforest hills behind" /></div>
+      <div class="frow-body reveal d1">
+        <p class="eyebrow on-dark">Why host here</p>
+        <h3 style="color:#fff;">Everything handled but the coaching.</h3>
+        <ul class="specs" style="margin-top:24px;grid-template-columns:1fr;">
+          <li><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"></polyline></svg> 145m counter-ballasted platform &amp; professional safety</li>
+          <li><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"></polyline></svg> Warm 26–30° water, no current, a perfectly protected bay</li>
+          <li><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"></polyline></svg> Assistant instructors, media, yoga &amp; excursions on tap</li>
+          <li><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"></polyline></svg> We help with accommodation, transport &amp; logistics</li>
+        </ul>
+        <p style="margin-top:20px;font-size:13px;color:var(--be-sky-blue);">Questions before you build a package? Email <a href="mailto:blueelementfreediving@gmail.com" style="color:var(--be-surface-teal);">blueelementfreediving@gmail.com</a> or WhatsApp <a href="https://wa.me/447554739347" style="color:var(--be-surface-teal);">+44 7554 739347</a>.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<script src="host.js" defer></script>
+<script src="shop-links.js"></script>
+<script src="chrome.js" defer></script>
+<script src="pages.js" defer></script>
+</body>
+</html>

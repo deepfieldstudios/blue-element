@@ -16,10 +16,11 @@
 
   // ---- Navigation model (single source of truth) ----
   var NAV = [
-    { id: 'freedive', label: 'Freedive With Us', href: 'courses.html', pages: ['courses', 'training', 'camps', 'calendar'], items: [
+    { id: 'freedive', label: 'Freedive With Us', href: 'courses.html', pages: ['courses', 'training', 'camps', 'host', 'calendar'], items: [
       { t: 'Courses', s: 'AIDA & Molchanovs · to instructor', href: 'courses.html' },
       { t: 'Training', s: 'Autonomous & elite · to 90m+', href: 'training.html' },
       { t: 'Private Coaching & Camps', s: 'Depth camps · from $750 a week', href: 'camps.html' },
+      { t: 'Host with us', s: 'Instructors · bring your camp to our platform', href: 'host-with-us.html' },
       { t: 'Calendar', s: "26/27 season · what's on, when", href: 'calendar.html' }
     ]},
     { id: 'competition', label: 'Competitions', href: 'competition.html', pages: ['competition'], items: [

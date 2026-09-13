@@ -349,6 +349,7 @@ a.cal-row:hover { background: rgba(32,125,146,.06); }
 .fdn-courses  { background: #044f7d; }
 .fdn-training { background: #207d92; }
 .fdn-camps    { background: #2a93a8; }
+.fdn-host     { background: #0e5b86; }
 .fdn-calendar { background: #204b66; }
 .fdn.is-current { box-shadow: inset 0 0 0 3px rgba(255,255,255,.9), 0 12px 28px rgba(2,27,46,.28); cursor: default; }
 .fdn.is-current:hover { transform: none; filter: none; }
