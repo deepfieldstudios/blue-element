@@ -24,6 +24,9 @@
   @media(prefers-reduced-motion:reduce){.shop-jump a:hover{transform:none;}}
 
   .shop-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(270px,1fr));gap:22px;margin-top:42px;}
+  /* Competitions: neat 2x2 for the four event cards */
+  #competitions .shop-grid{grid-template-columns:repeat(2,1fr);}
+  @media(max-width:640px){ #competitions .shop-grid{grid-template-columns:1fr;} }
   .shop-card{display:flex;flex-direction:column;background:#fff;border:1px solid var(--be-border,rgba(4,79,125,.14));
     border-radius:20px;padding:26px 24px;box-shadow:0 10px 30px rgba(2,27,46,.06);}
   .shop-card .lvl{font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:var(--be-teal,#207d92);font-weight:600;}
