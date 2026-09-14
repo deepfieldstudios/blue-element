@@ -1,0 +1,5 @@
+# Blue Element Freediving — robots.txt
+User-agent: *
+Allow: /
+
+Sitemap: https://blueelementstore.com/sitemap.xml
