@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Arrival form · Blue Element, Dominica</title>
+<meta name="description" content="Two minutes before you arrive in Soufrière: who you are, when you land, what you've booked, your insurance, your level and your recent numbers." />
+<meta name="robots" content="noindex" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,400..800&amp;display=swap" />
+<link rel="stylesheet" href="site.css" />
+<style>
+  /* ---- Arrival form (scoped). Reuses the .ci-field controls from the competition-interest modal. ---- */
+  .ob-wrap{max-width:640px;margin:0 auto;}
+  .ob-card{background:#fff;border:1px solid var(--be-border,rgba(4,79,125,.14));border-radius:20px;padding:34px 30px;}
+  @media(max-width:560px){.ob-card{padding:26px 20px;}}
+  .ob-card .ci-field:first-of-type{margin-top:0;}
+  .ob-row{display:grid;grid-template-columns:1fr 1fr;gap:16px;}
+  @media(max-width:560px){.ob-row{grid-template-columns:1fr;}}
+  .ob-row{margin-top:20px;} .ob-row:first-of-type{margin-top:0;} .ob-row .ci-field{margin-top:0;}
+  .ob-pbs{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:10px;}
+  @media(max-width:560px){.ob-pbs{grid-template-columns:repeat(2,1fr);}}
+  .ob-pbs label{font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--be-teal,#207d92);font-weight:600;display:block;margin-bottom:6px;}
+  .ob-pbs input{width:100%;padding:12px 13px;border:1px solid var(--be-border,rgba(4,79,125,.2));border-radius:12px;font:inherit;font-size:15px;color:var(--be-ocean-blue,#044f7d);background:#fff;}
+  .ob-pbs input:focus{outline:none;border-color:var(--be-teal,#207d92);box-shadow:0 0 0 3px rgba(32,125,146,.15);}
+  .ob-help{font-size:13px;line-height:1.5;color:var(--be-text-soft,#4a5b66);margin:6px 0 0;}
+  .ob-legend{font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:var(--be-teal,#207d92);font-weight:600;margin:28px 0 4px;}
+  .ob-submit{margin-top:26px;width:100%;}
+  .ob-note{font-size:12.5px;color:var(--be-text-soft,#4a5b66);text-align:center;margin:14px 0 0;}
+  .ob-done{display:none;text-align:center;padding:20px 0;}
+  .ob-done h2{color:var(--be-ocean-blue,#044f7d);margin:0 0 10px;}
+  .ob-done p{color:var(--be-text-soft,#4a5b66);}
+  .ob-card.is-done form{display:none;}
+  .ob-card.is-done .ob-done{display:block;}
+  .ob-hp{position:absolute;left:-9999px;width:1px;height:1px;overflow:hidden;}
+</style>
+</head>
+<body data-page="onboarding">
+
+<!-- ============================== HERO ============================== -->
+<section class="page-hero" data-screen-label="Arrival form — Hero">
+  <div class="page-hero-media"><img id="heroImg" src="assets/media/clean/platform-best.jpg" style="object-position:center 50%;" alt="The Blue Element platform on the calm water of Soufrière Bay" /></div>
+  <div class="page-hero-inner">
+    <div class="container">
+      <nav class="breadcrumb reveal"><a href="index.html">Home</a> <span class="sep">/</span> Arrival form</nav>
+      <h1 class="reveal d1">Before you arrive</h1>
+      <p class="ph-sub reveal d2">Two minutes. Tells us who's landing, when, what you've booked and where you're at in the water, so your first day is dive time, not admin.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ============================== FORM ============================== -->
+<section class="section bg-light" data-screen-label="Arrival form — Form">
+  <div class="container">
+    <div class="ob-wrap reveal">
+      <div class="ob-card" id="obCard">
+        <form id="obForm" novalidate>
+          <!-- honeypot: real people never see this -->
+          <input class="ob-hp" type="text" name="company" tabindex="-1" autocomplete="off" />
+
+          <div class="ob-row">
+            <div class="ci-field">
+              <label for="obName">Full name</label>
+              <input id="obName" name="name" type="text" autocomplete="name" required />
+            </div>
+            <div class="ci-field">
+              <label for="obEmail">Email</label>
+              <input id="obEmail" name="email" type="email" autocomplete="email" required />
+            </div>
+          </div>
+
+          <div class="ob-row">
+            <div class="ci-field">
+              <label for="obArrive">Arrival date in Dominica</label>
+              <input id="obArrive" name="arrival_date" type="date" required />
+            </div>
+            <div class="ci-field">
+              <label for="obFor">What you've signed up for</label>
+              <select id="obFor" name="signed_up_for" required>
+                <option value="" disabled selected>Choose one</option>
+                <optgroup label="Competitions">
+                  <option value="comp-nov-2026">Blue Element November · 8–17 Nov 2026</option>
+                  <option value="comp-march-mini-2027">March Mini · 19–23 Mar 2027</option>
+                  <option value="comp-may-open-2027">May Open · 8–17 May 2027</option>
+                </optgroup>
+                <optgroup label="Camps">
+                  <option value="camp-depth-dec-2026">Depth Camp · December 2026</option>
+                  <option value="camp-other">Another camp (say which below)</option>
+                </optgroup>
+                <optgroup label="Courses">
+                  <option value="course-try">Try Freediving</option>
+                  <option value="course-freediver">Freediver</option>
+                  <option value="course-advanced">Advanced Freediver</option>
+                  <option value="course-master">Master Freediver</option>
+                  <option value="course-safety">Safety Diver Course</option>
+                  <option value="course-instructor">AIDA Instructor Course</option>
+                </optgroup>
+                <optgroup label="Training">
+                  <option value="train-autonomous">Autonomous platform access</option>
+                  <option value="train-elite">Elite support</option>
+                  <option value="train-coaching">Private coaching</option>
+                </optgroup>
+              </select>
+            </div>
+          </div>
+
+          <div class="ob-row">
+            <div class="ci-field">
+              <label for="obInsured">Dive insurance</label>
+              <select id="obInsured" name="insured" required>
+                <option value="" disabled selected>Choose one</option>
+                <option value="dan">Yes — DAN</option>
+                <option value="other">Yes — another provider</option>
+                <option value="no">Not yet</option>
+              </select>
+            </div>
+            <div class="ci-field">
+              <label for="obCert">Highest certificate</label>
+              <select id="obCert" name="highest_certificate" required>
+                <option value="" disabled selected>Choose one</option>
+                <option>None yet</option>
+                <option>AIDA 1</option>
+                <option>AIDA 2</option>
+                <option>AIDA 3</option>
+                <option>AIDA 4</option>
+                <option>AIDA Instructor</option>
+                <option>Molchanovs Wave 1</option>
+                <option>Molchanovs Wave 2</option>
+                <option>Molchanovs Wave 3</option>
+                <option>Molchanovs Wave 4</option>
+                <option>Molchanovs Instructor</option>
+                <option>SSI / PADI Freediver</option>
+                <option>SSI / PADI Advanced or Master</option>
+                <option>Other (say which below)</option>
+              </select>
+            </div>
+          </div>
+
+          <p class="ob-legend">Recent personal bests · last 3 months</p>
+          <p class="ob-help">Only what you've actually done since June. Leave blank anything you haven't dived.</p>
+          <div class="ob-pbs">
+            <div><label for="pbCwt">CWT · m</label><input id="pbCwt" name="pb_cwt" type="number" min="0" max="140" inputmode="numeric" /></div>
+            <div><label for="pbCwtb">CWTB · m</label><input id="pbCwtb" name="pb_cwtb" type="number" min="0" max="130" inputmode="numeric" /></div>
+            <div><label for="pbCnf">CNF · m</label><input id="pbCnf" name="pb_cnf" type="number" min="0" max="110" inputmode="numeric" /></div>
+            <div><label for="pbFim">FIM · m</label><input id="pbFim" name="pb_fim" type="number" min="0" max="135" inputmode="numeric" /></div>
+            <div><label for="pbSta">STA · mm:ss</label><input id="pbSta" name="pb_sta" type="text" placeholder="5:30" inputmode="numeric" /></div>
+            <div><label for="pbDyn">DYN / DYNB · m</label><input id="pbDyn" name="pb_dyn" type="number" min="0" max="320" inputmode="numeric" /></div>
+          </div>
+
+          <div class="ci-field">
+            <label for="obNote">Anything we should know? <span class="ci-opt">Optional</span></label>
+            <textarea id="obNote" name="note" rows="2" placeholder="Other camp or certificate, insurance provider, a goal for the trip…"></textarea>
+          </div>
+
+          <p class="ci-error" id="obError" role="alert" hidden></p>
+          <button class="btn btn-teal btn-lg ob-submit" type="submit" id="obSubmit">Send</button>
+          <p class="ob-note">Goes straight to the Blue Element team. Nothing else, no list.</p>
+        </form>
+
+        <div class="ob-done" id="obDone">
+          <p class="eyebrow" style="justify-content:center">Got it</p>
+          <h2>See you in the bay.</h2>
+          <p>That's with us. If your plans change, message us on WhatsApp and we'll update it.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<script src="onboarding.js"></script>
+<script src="chrome.js" defer></script>
+<script src="pages.js" defer></script>
+</body>
+</html>
