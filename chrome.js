@@ -16,10 +16,10 @@
   // OFF until the beacon token is set. To enable: create the site at
   // dash.cloudflare.com → Web Analytics (under the Blue Element account),
   // then paste its token below. No other change needed — it loads on every page.
-  var CF_ANALYTICS_TOKEN = ''; // e.g. 'a1b2c3d4e5f6...'
+  var CF_ANALYTICS_TOKEN = '34116ececf0b42b0a244a489950fd9e5'; // blueelementstore.com
   if (CF_ANALYTICS_TOKEN) {
     var cfb = document.createElement('script');
-    cfb.defer = true;
+    cfb.type = 'module';
     cfb.src = 'https://static.cloudflareinsights.com/beacon.min.js';
     cfb.setAttribute('data-cf-beacon', '{"token":"' + CF_ANALYTICS_TOKEN + '"}');
     document.head.appendChild(cfb);
