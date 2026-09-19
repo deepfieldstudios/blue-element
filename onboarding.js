@@ -18,7 +18,7 @@
    the matching value so the guest lands with the right thing chosen.
    ============================================================ */
 (function () {
-  var ENDPOINT = ''; // <-- paste a FormSubmit or Formspree URL
+  var ENDPOINT = 'https://formsubmit.co/ajax/blueelementfreediving@gmail.com'; // FormSubmit; first submission triggers a one-time confirmation email
   var MAIL = 'blueelementfreediving@gmail.com';
 
   var form = document.getElementById('obForm');

@@ -11,6 +11,20 @@
   var current = body.getAttribute('data-page') || '';
   var prefersReduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
+  // ---- Analytics: Cloudflare Web Analytics (cookieless, no consent banner) ----
+  // Client owns the data, Deep Field owns the method. Single config point.
+  // OFF until the beacon token is set. To enable: create the site at
+  // dash.cloudflare.com → Web Analytics (under the Blue Element account),
+  // then paste its token below. No other change needed — it loads on every page.
+  var CF_ANALYTICS_TOKEN = ''; // e.g. 'a1b2c3d4e5f6...'
+  if (CF_ANALYTICS_TOKEN) {
+    var cfb = document.createElement('script');
+    cfb.defer = true;
+    cfb.src = 'https://static.cloudflareinsights.com/beacon.min.js';
+    cfb.setAttribute('data-cf-beacon', '{"token":"' + CF_ANALYTICS_TOKEN + '"}');
+    document.head.appendChild(cfb);
+  }
+
   var LOGO = 'assets/logo/be_logo_darkblue_white.png';
   var MAIL = 'blueelementfreediving@gmail.com';
 
