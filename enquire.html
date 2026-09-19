@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Enquire · Blue Element Freediving, Dominica</title>
+<meta name="description" content="Tell us what you're after — a competition, a course, training on our platform, or 1:1 coaching in Soufrière Bay, Dominica — and we'll come back with everything you need to plan it." />
+<meta name="robots" content="index, follow" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,400..800&amp;display=swap" />
+<link rel="stylesheet" href="site.css" />
+<link rel="icon" href="/favicon.ico" sizes="any" />
+<link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon/favicon-32x32.png" />
+<link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon/favicon-16x16.png" />
+<link rel="apple-touch-icon" sizes="180x180" href="/assets/favicon/apple-touch-icon.png" />
+<link rel="manifest" href="/site.webmanifest" />
+<meta name="theme-color" content="#021b2e" />
+<link rel="canonical" href="https://blueelementstore.com/enquire.html" />
+<meta property="og:type" content="website" />
+<meta property="og:site_name" content="Blue Element Freediving" />
+<meta property="og:title" content="Enquire — Blue Element Freediving" />
+<meta property="og:url" content="https://blueelementstore.com/enquire.html" />
+<style>
+  /* ---- Enquiry form (scoped). Reuses the .ci-field controls from the competition-interest modal. ---- */
+  .eq-wrap{max-width:680px;margin:0 auto;}
+  .eq-card{background:#fff;border:1px solid rgba(4,79,125,.14);border-radius:20px;padding:34px 30px;}
+  @media(max-width:560px){.eq-card{padding:26px 20px;}}
+  .eq-seglead{font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:var(--be-teal);font-weight:600;margin:0 0 10px;}
+  .eq-seg{display:flex;flex-wrap:wrap;gap:10px;margin:0 0 4px;}
+  .eq-seg-btn{flex:1 1 auto;min-width:130px;padding:12px 14px;border:1px solid rgba(4,79,125,.2);border-radius:12px;background:#fff;color:var(--be-ocean-blue);font:inherit;font-weight:600;font-size:14.5px;cursor:pointer;transition:background .15s,border-color .15s,color .15s;}
+  .eq-seg-btn:hover{border-color:var(--be-teal);}
+  .eq-seg-btn.is-on{background:var(--be-teal);border-color:var(--be-teal);color:#fff;}
+  .eq-row{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:20px;}
+  .eq-row .ci-field{margin-top:0;}
+  @media(max-width:560px){.eq-row{grid-template-columns:1fr;}}
+  .eq-block[hidden]{display:none;}
+  .eq-legend{font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:var(--be-teal);font-weight:600;margin:30px 0 2px;padding-top:24px;border-top:1px solid rgba(4,79,125,.1);}
+  .eq-help{font-size:13px;line-height:1.5;color:var(--be-text-soft);margin:6px 0 0;}
+  .eq-checks{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin-top:10px;}
+  @media(max-width:560px){.eq-checks{grid-template-columns:repeat(2,1fr);}}
+  .eq-check{display:flex;align-items:center;gap:8px;font-size:14px;color:var(--be-ocean-blue);border:1px solid rgba(4,79,125,.18);border-radius:10px;padding:9px 11px;cursor:pointer;user-select:none;}
+  .eq-check input{width:16px;height:16px;accent-color:var(--be-teal);flex:none;}
+  .eq-consent{display:flex;gap:10px;align-items:flex-start;margin-top:24px;font-size:13.5px;line-height:1.5;color:var(--be-text-soft);cursor:pointer;}
+  .eq-consent input{width:18px;height:18px;margin-top:1px;accent-color:var(--be-teal);flex:none;}
+  .eq-submit{margin-top:26px;width:100%;}
+  .eq-note{font-size:12.5px;color:var(--be-text-soft);text-align:center;margin:14px 0 0;}
+  .eq-note a{color:var(--be-teal);}
+  .eq-hp{position:absolute;left:-9999px;width:1px;height:1px;overflow:hidden;}
+  .eq-done{display:none;text-align:center;padding:24px 0;}
+  .eq-done h2{color:var(--be-ocean-blue);margin:0 0 10px;}
+  .eq-done p{color:var(--be-text-soft);max-width:44ch;margin:0 auto;}
+  .eq-done .actions{margin-top:22px;display:flex;gap:12px;justify-content:center;flex-wrap:wrap;}
+  .eq-card.is-done form{display:none;}
+  .eq-card.is-done .eq-done{display:block;}
+</style>
+</head>
+<body data-page="enquire">
+
+<!-- ============================== HERO ============================== -->
+<section class="page-hero" data-screen-label="Enquire — Hero" style="min-height:clamp(360px,46vh,480px);">
+  <div class="page-hero-media"><img id="heroImg" src="assets/media/clean/bay-wide.jpg" style="object-position:center 55%;" alt="The Blue Element platform on the calm water of Soufrière Bay, Dominica" /></div>
+  <div class="page-hero-inner">
+    <div class="container">
+      <nav class="breadcrumb reveal"><a href="index.html">Home</a> <span class="sep">/</span> Enquire</nav>
+      <h1 class="reveal d1">Start the conversation</h1>
+      <p class="ph-sub reveal d2">Tell us what you're after and where you're at in the water. We'll come back personally with the right info, dates and next steps — no bots, no hard sell.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ============================== FORM ============================== -->
+<section class="section bg-light" data-screen-label="Enquire — Form">
+  <div class="container">
+    <div class="eq-wrap reveal">
+      <div class="eq-card" id="eqCard">
+        <form id="eqForm" novalidate>
+          <!-- honeypot: real people never see this -->
+          <input class="eq-hp" type="text" name="company" tabindex="-1" autocomplete="off" />
+          <input type="hidden" name="interest" id="eqInterest" value="competition" />
+
+          <p class="eq-seglead">What can we help with?</p>
+          <div class="eq-seg" role="group" aria-label="What are you interested in?">
+            <button type="button" class="eq-seg-btn is-on" data-avenue="competition" aria-pressed="true">Competition</button>
+            <button type="button" class="eq-seg-btn" data-avenue="course" aria-pressed="false">Course</button>
+            <button type="button" class="eq-seg-btn" data-avenue="training" aria-pressed="false">Training</button>
+            <button type="button" class="eq-seg-btn" data-avenue="coaching" aria-pressed="false">1:1 Coaching</button>
+          </div>
+
+          <!-- ---- Universal contact ---- -->
+          <div class="eq-row" style="margin-top:26px;">
+            <div class="ci-field">
+              <label for="eqName">Full name</label>
+              <input id="eqName" name="name" type="text" autocomplete="name" required />
+            </div>
+            <div class="ci-field">
+              <label for="eqEmail">Email</label>
+              <input id="eqEmail" name="email" type="email" autocomplete="email" required />
+            </div>
+          </div>
+          <div class="eq-row">
+            <div class="ci-field">
+              <label for="eqPhone">Phone / WhatsApp</label>
+              <input id="eqPhone" name="phone" type="tel" autocomplete="tel" placeholder="+1 …" required />
+            </div>
+            <div class="ci-field">
+              <label for="eqCountry">Country</label>
+              <input id="eqCountry" name="country" type="text" autocomplete="country-name" required />
+            </div>
+          </div>
+
+          <!-- ============ COMPETITION ============ -->
+          <div class="eq-block" data-block="competition">
+            <p class="eq-legend">About your competition</p>
+            <div class="ci-field">
+              <label for="cmWhich">Which competition?</label>
+              <select id="cmWhich" name="comp_which">
+                <option value="" disabled selected>Choose one</option>
+                <option>Blue Element November · 8–17 Nov 2026</option>
+                <option>Blue Element March Mini · 19–23 Mar 2027</option>
+                <option>Blue Element May Open · 8–17 May 2027</option>
+                <option>Not sure yet / more than one</option>
+              </select>
+            </div>
+            <div class="eq-row">
+              <div class="ci-field">
+                <label for="cmCert">Current certification</label>
+                <select id="cmCert" name="comp_cert">
+                  <option value="" disabled selected>Choose one</option>
+                  <option>None yet</option>
+                  <option>AIDA 1</option><option>AIDA 2</option><option>AIDA 3</option><option>AIDA 4</option><option>AIDA Instructor</option>
+                  <option>Molchanovs Wave 1</option><option>Molchanovs Wave 2</option><option>Molchanovs Wave 3</option><option>Molchanovs Wave 4</option><option>Molchanovs Instructor</option>
+                  <option>SSI / PADI Freediver</option><option>SSI / PADI Advanced or Master</option>
+                  <option>CMAS</option><option>Other</option>
+                </select>
+              </div>
+              <div class="ci-field">
+                <label for="cmPb">Current PB depth</label>
+                <select id="cmPb" name="comp_pb">
+                  <option value="" disabled selected>Choose one</option>
+                  <option>Just starting (under 20m)</option>
+                  <option>20–30m</option><option>30–40m</option><option>40–50m</option><option>50–60m</option><option>60–70m</option><option>70–80m</option><option>80m+</option>
+                </select>
+              </div>
+            </div>
+            <div class="eq-row">
+              <div class="ci-field">
+                <label for="cmTarget">Target depth this trip <span class="ci-opt">Optional · metres</span></label>
+                <input id="cmTarget" name="comp_target" type="number" min="0" max="140" inputmode="numeric" />
+              </div>
+              <div class="ci-field">
+                <label for="cmSafety">Safety support needed?</label>
+                <select id="cmSafety" name="comp_safety">
+                  <option value="" disabled selected>Choose one</option>
+                  <option>Yes please, from Blue Element</option>
+                  <option>No, I'll bring my own</option>
+                  <option>Not sure yet</option>
+                </select>
+              </div>
+            </div>
+            <p class="eq-legend" style="border:0;padding-top:22px;">Disciplines you're chasing <span class="ci-opt">Optional</span></p>
+            <div class="eq-checks">
+              <label class="eq-check"><input type="checkbox" name="disciplines" value="CWT" /> CWT</label>
+              <label class="eq-check"><input type="checkbox" name="disciplines" value="CWTB" /> CWTB</label>
+              <label class="eq-check"><input type="checkbox" name="disciplines" value="CNF" /> CNF</label>
+              <label class="eq-check"><input type="checkbox" name="disciplines" value="FIM" /> FIM</label>
+              <label class="eq-check"><input type="checkbox" name="disciplines" value="STA" /> STA</label>
+              <label class="eq-check"><input type="checkbox" name="disciplines" value="DYN" /> DYN / DYNB</label>
+            </div>
+            <div class="eq-row">
+              <div class="ci-field">
+                <label for="cmInsured">Dive insurance</label>
+                <select id="cmInsured" name="comp_insured">
+                  <option value="" disabled selected>Choose one</option>
+                  <option>Yes — DAN</option><option>Yes — another provider</option><option>Not yet</option>
+                </select>
+              </div>
+              <div class="ci-field">
+                <label for="cmAccom">Need accommodation help?</label>
+                <select id="cmAccom" name="comp_accommodation">
+                  <option value="" disabled selected>Choose one</option>
+                  <option>Yes — send options</option><option>No — sorted</option>
+                </select>
+              </div>
+            </div>
+          </div>
+
+          <!-- ============ COURSE ============ -->
+          <div class="eq-block" data-block="course" hidden>
+            <p class="eq-legend">About the course</p>
+            <div class="ci-field">
+              <label for="coWhich">Which course?</label>
+              <select id="coWhich" name="course_which">
+                <option value="" disabled selected>Choose one</option>
+                <option>Introduction to Freediving</option>
+                <option>Freediver</option>
+                <option>Advanced Freediver</option>
+                <option>Master Freediver</option>
+                <option>AIDA Vertical Blue Safety course</option>
+                <option>No Limits course</option>
+                <option>Instructor course</option>
+                <option>Advanced EQ Clinic</option>
+                <option>Not sure yet / need advice</option>
+              </select>
+            </div>
+            <div class="eq-row">
+              <div class="ci-field">
+                <label for="coCert">Prior experience / current cert</label>
+                <select id="coCert" name="course_cert">
+                  <option value="" disabled selected>Choose one</option>
+                  <option>Complete beginner</option>
+                  <option>AIDA 1</option><option>AIDA 2</option><option>AIDA 3</option><option>AIDA 4</option>
+                  <option>Molchanovs Wave 1</option><option>Molchanovs Wave 2</option><option>Molchanovs Wave 3</option>
+                  <option>SSI / PADI Freediver</option><option>SSI / PADI Advanced or Master</option>
+                  <option>Other</option>
+                </select>
+              </div>
+              <div class="ci-field">
+                <label for="coSwim">Comfortable in deep water?</label>
+                <select id="coSwim" name="course_swim">
+                  <option value="" disabled selected>Choose one</option>
+                  <option>Confident swimmer</option>
+                  <option>Some experience</option>
+                  <option>New to it</option>
+                </select>
+              </div>
+            </div>
+            <div class="eq-row">
+              <div class="ci-field">
+                <label for="coDates">Preferred dates <span class="ci-opt">& how flexible</span></label>
+                <input id="coDates" name="course_dates" type="text" placeholder="e.g. mid-Feb, flexible ±1 week" />
+              </div>
+              <div class="ci-field">
+                <label for="coLen">How long on the island?</label>
+                <select id="coLen" name="course_length">
+                  <option value="" disabled selected>Choose one</option>
+                  <option>A few days</option><option>About a week</option><option>Two weeks</option><option>Longer</option><option>Not sure yet</option>
+                </select>
+              </div>
+            </div>
+            <div class="eq-row">
+              <div class="ci-field">
+                <label for="coWho">Who's coming?</label>
+                <select id="coWho" name="course_group">
+                  <option value="" disabled selected>Choose one</option>
+                  <option>Just me</option><option>Me + partner</option><option>Small group</option>
+                </select>
+              </div>
+              <div class="ci-field">
+                <label for="coAccom">Need accommodation help?</label>
+                <select id="coAccom" name="course_accommodation">
+                  <option value="" disabled selected>Choose one</option>
+                  <option>Yes — send options</option><option>No — sorted</option>
+                </select>
+              </div>
+            </div>
+          </div>
+
+          <!-- ============ TRAINING ============ -->
+          <div class="eq-block" data-block="training" hidden>
+            <p class="eq-legend">About your training</p>
+            <div class="ci-field">
+              <label for="trWhich">Which package?</label>
+              <select id="trWhich" name="train_which">
+                <option value="" disabled selected>Choose one</option>
+                <option>Autonomous Platform — Daily</option>
+                <option>Autonomous Platform — Weekly</option>
+                <option>Autonomous Platform — Monthly</option>
+                <option>Elite Support — Daily</option>
+                <option>Elite Support — Monthly</option>
+                <option>Private Coaching — Half Day</option>
+                <option>Not sure yet / need advice</option>
+              </select>
+            </div>
+            <div class="eq-row">
+              <div class="ci-field">
+                <label for="trCert">Current certification</label>
+                <select id="trCert" name="train_cert">
+                  <option value="" disabled selected>Choose one</option>
+                  <option>AIDA 2</option><option>AIDA 3</option><option>AIDA 4</option><option>AIDA Instructor</option>
+                  <option>Molchanovs Wave 2</option><option>Molchanovs Wave 3</option><option>Molchanovs Wave 4</option>
+                  <option>SSI / PADI Advanced or Master</option>
+                  <option>CMAS</option><option>Other</option>
+                </select>
+              </div>
+              <div class="ci-field">
+                <label for="trPb">Current PB depth</label>
+                <select id="trPb" name="train_pb">
+                  <option value="" disabled selected>Choose one</option>
+                  <option>Under 30m</option><option>30–40m</option><option>40–50m</option><option>50–60m</option><option>60–70m</option><option>70–80m</option><option>80–90m</option><option>90m+</option>
+                </select>
+              </div>
+            </div>
+            <div class="eq-row">
+              <div class="ci-field">
+                <label for="trTarget">Target depth this trip <span class="ci-opt">Optional · metres</span></label>
+                <input id="trTarget" name="train_target" type="number" min="0" max="140" inputmode="numeric" />
+              </div>
+              <div class="ci-field">
+                <label for="trSafety">Safety support needed?</label>
+                <select id="trSafety" name="train_safety">
+                  <option value="" disabled selected>Choose one</option>
+                  <option>Yes please, from Blue Element</option>
+                  <option>No, I'll bring my own</option>
+                  <option>Not sure yet</option>
+                </select>
+              </div>
+            </div>
+            <div class="eq-row">
+              <div class="ci-field">
+                <label for="trInsured">Dive insurance</label>
+                <select id="trInsured" name="train_insured">
+                  <option value="" disabled selected>Choose one</option>
+                  <option>Yes — DAN</option><option>Yes — another provider</option><option>Not yet</option>
+                </select>
+              </div>
+              <div class="ci-field">
+                <label for="trDates">Rough dates <span class="ci-opt">Optional</span></label>
+                <input id="trDates" name="train_dates" type="text" placeholder="e.g. 2 weeks in March" />
+              </div>
+            </div>
+            <div class="ci-field">
+              <label for="trAccom">Need accommodation help?</label>
+              <select id="trAccom" name="train_accommodation">
+                <option value="" disabled selected>Choose one</option>
+                <option>Yes — send options</option><option>No — sorted</option>
+              </select>
+            </div>
+          </div>
+
+          <!-- ============ COACHING ============ -->
+          <div class="eq-block" data-block="coaching" hidden>
+            <p class="eq-legend">About your coaching</p>
+            <p class="eq-help">1:1 coaching starts with a short call so we understand your goals and shape the right plan. Tell us a little and we'll set that up.</p>
+            <div class="eq-row" style="margin-top:16px;">
+              <div class="ci-field">
+                <label for="cgLevel">Your current level</label>
+                <select id="cgLevel" name="coach_level">
+                  <option value="" disabled selected>Choose one</option>
+                  <option>New to freediving</option>
+                  <option>Recreational</option>
+                  <option>Intermediate (30–50m)</option>
+                  <option>Advanced (50–80m)</option>
+                  <option>Elite (80m+)</option>
+                </select>
+              </div>
+              <div class="ci-field">
+                <label for="cgCall">Best way to talk</label>
+                <select id="cgCall" name="coach_call">
+                  <option value="" disabled selected>Choose one</option>
+                  <option>WhatsApp</option><option>Zoom / Google Meet</option><option>Phone</option>
+                </select>
+              </div>
+            </div>
+            <div class="ci-field">
+              <label for="cgGoals">What do you want from coaching?</label>
+              <textarea id="cgGoals" name="coach_goals" rows="3" placeholder="Your goals, what's holding you back, a depth or discipline you're chasing…"></textarea>
+            </div>
+          </div>
+
+          <!-- ---- Shared lower section ---- -->
+          <p class="eq-legend">A couple more things</p>
+          <div class="ci-field">
+            <label for="eqHeard">How did you hear about us? <span class="ci-opt">Optional</span></label>
+            <select id="eqHeard" name="heard_about">
+              <option value="" selected>—</option>
+              <option>Instagram</option><option>Google search</option><option>A friend or athlete</option><option>I've been before</option><option>Facebook / YouTube</option><option>Other</option>
+            </select>
+          </div>
+          <div class="ci-field">
+            <label for="eqNote">Anything else? <span class="ci-opt">Optional</span></label>
+            <textarea id="eqNote" name="note" rows="2" placeholder="Questions about travel, timing, budget, anything at all…"></textarea>
+          </div>
+
+          <label class="eq-consent">
+            <input type="checkbox" name="consent" value="yes" />
+            <span>Add me to the Blue Element list for occasional news, events and offers. You can unsubscribe anytime — see our <a href="privacy.html">privacy policy</a>.</span>
+          </label>
+
+          <p class="ci-error" id="eqError" role="alert" hidden></p>
+          <button class="btn btn-teal btn-lg eq-submit" type="submit" id="eqSubmit">Send enquiry</button>
+          <p class="eq-note">Goes straight to the Blue Element team. If it's urgent, message us on <a href="https://wa.me/447554739347" target="_blank" rel="noopener">WhatsApp</a>.</p>
+        </form>
+
+        <div class="eq-done" id="eqDone">
+          <p class="eyebrow center">Got it</p>
+          <h2>That's with us.</h2>
+          <p>Thanks — we'll come back to you personally with the details. Keep an eye on your inbox (and your spam folder, just in case).</p>
+          <div class="actions">
+            <a class="btn btn-teal" href="https://wa.me/447554739347" target="_blank" rel="noopener">Message us on WhatsApp</a>
+            <a class="btn btn-outline" href="index.html">Back to home</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<script src="inquiry.js"></script>
+<script src="chrome.js" defer></script>
+<script src="pages.js" defer></script>
+</body>
+</html>

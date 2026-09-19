@@ -112,7 +112,7 @@
         '<p>World-class freediving courses, training and competition in Soufrière, Dominica — the Caribbean\u2019s Nature Island.</p>' +
         '<p class="three">No waves. No current. No depth limit.</p></div>' +
       '<div class="footer-col"><h4>Freedive</h4>' +
-        '<a href="courses.html">Courses</a><a href="training.html">Training</a><a href="camps.html">Private Coaching &amp; Camps</a><a href="about.html#platform">Platform &amp; Conditions</a></div>' +
+        '<a href="courses.html">Courses</a><a href="training.html">Training</a><a href="camps.html">Private Coaching &amp; Camps</a><a href="enquire.html">Enquire</a><a href="about.html#platform">Platform &amp; Conditions</a></div>' +
       '<div class="footer-col"><h4>Competition</h4>' +
         '<a href="competition.html">Annual Competition</a><a href="athletes.html">Athletes</a><a href="sponsorship.html">Sponsor the Team</a><a href="gallery.html">Gallery &amp; Media</a></div>' +
       '<div class="footer-col"><h4>Visit</h4>' +
