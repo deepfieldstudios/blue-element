@@ -116,7 +116,7 @@
       '<div class="footer-col"><h4>Competition</h4>' +
         '<a href="competition.html">Annual Competition</a><a href="athletes.html">Athletes</a><a href="sponsorship.html">Sponsor the Team</a><a href="gallery.html">Gallery &amp; Media</a></div>' +
       '<div class="footer-col"><h4>Visit</h4>' +
-        '<a href="dominica.html">Discover Dominica</a><a href="dominica.html#travel">Travel &amp; Logistics</a><a href="about.html">About Us</a><a href="mailto:' + MAIL + '">Book / Contact</a><a href="terms.html">Terms &amp; Refunds</a><a href="privacy.html">Privacy</a></div>' +
+        '<a href="dominica.html">Discover Dominica</a><a href="dominica.html#travel">Travel &amp; Logistics</a><a href="plan-your-trip.html">Plan Your Trip</a><a href="about.html">About Us</a><a href="mailto:' + MAIL + '">Book / Contact</a><a href="terms.html">Terms &amp; Refunds</a><a href="privacy.html">Privacy</a></div>' +
     '</div>' +
     '<div class="footer-bottom">' +
       '<span>© 2026 Blue Element Freediving · Soufrière, Dominica · <a href="mailto:' + MAIL + '" style="color:var(--be-surface-teal);">' + MAIL + '</a> · <a href="terms.html" style="color:var(--be-surface-teal);">Terms &amp; refunds</a> · <a href="privacy.html" style="color:var(--be-surface-teal);">Privacy</a></span>' +
