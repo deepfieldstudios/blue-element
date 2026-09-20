@@ -26,7 +26,7 @@
    ============================================================ */
 (function () {
   var LEAD = {
-    endpoint: '',                 // <-- paste your MailerLite/Mailchimp subscribe URL (applies to every event page)
+    endpoint: 'https://assets.mailerlite.com/jsonp/2646617/forms/199111073877460919/subscribe', // MailerLite (Website — Leads)
     emailField: 'fields[email]',  // MailerLite. For Mailchimp use 'EMAIL'
     extra: { 'ml-submit': '1', 'anticsrf': 'true' } // MailerLite. For Mailchimp use {}
   };

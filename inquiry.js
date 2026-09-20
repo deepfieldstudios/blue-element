@@ -28,7 +28,7 @@
 (function () {
   // ---- Delivery config ----
   var FORM_ENDPOINT = 'https://formsubmit.co/ajax/blueelementfreediving@gmail.com'; // team inbox (same as onboarding)
-  var ML_ENDPOINT   = '';                 // <-- paste MailerLite subscribe URL to switch on the auto info-pack
+  var ML_ENDPOINT   = 'https://assets.mailerlite.com/jsonp/2646617/forms/199111073877460919/subscribe'; // MailerLite (Website — Leads)
   var ML_EMAIL_FIELD = 'fields[email]';
   var ML_NAME_FIELD  = 'fields[name]';
   var ML_EXTRA = { 'ml-submit': '1', 'anticsrf': 'true' };
