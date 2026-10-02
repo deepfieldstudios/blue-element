@@ -44,7 +44,7 @@
       { t: 'Calendar', s: "26/27 season · what's on, when", href: 'calendar.html' }
     ]},
     { id: 'athletes', label: 'Athletes', href: 'athletes.html', pages: ['athletes', 'sponsorship'], items: [
-      { t: 'Harry McCahill', s: 'Co-founder · UK · CNF #1', href: 'athlete-harry.html' },
+      { t: 'Harry McCahill', s: 'Managing Director · UK · CNF #1', href: 'athlete-harry.html' },
       { t: 'Arron Walker', s: 'Depth · UK · to 90m', href: 'athlete-arron.html' },
       { t: 'Natalie Bruce', s: 'Pool & Depth · USA · World #7', href: 'athlete-natalie.html' },
       { t: 'Kathleen Greubel', s: 'Depth · Germany · NR holder', href: 'athlete-kathleen.html' },
