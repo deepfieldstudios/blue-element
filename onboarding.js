@@ -18,7 +18,7 @@
    the matching value so the guest lands with the right thing chosen.
    ============================================================ */
 (function () {
-  var ENDPOINT = 'https://formsubmit.co/ajax/blueelementfreediving@gmail.com'; // FormSubmit; first submission triggers a one-time confirmation email
+  var ENDPOINT = 'https://formsubmit.co/ajax/8995b7e3f311cf1091ae8ea3f6a59973'; // FormSubmit alias for blueelementfreediving@gmail.com (activated 20 Sep 2026); keeps the address out of the source
   var MAIL = 'blueelementfreediving@gmail.com';
 
   var form = document.getElementById('obForm');
