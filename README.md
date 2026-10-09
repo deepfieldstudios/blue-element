@@ -259,6 +259,7 @@ via WhatsApp).
 
 - Source PDF was **34 MB**; compressed with `gs -dPDFSETTINGS=/ebook` to **1.9 MB** and stored at
   `assets/docs/blue-element-november-2026.pdf`.
+- **8 Oct 2026:** that Canva PDF is replaced by the HTML rebuild (`Blue Element HQ/40_COMPETITIONS/Events by Year/2026/NOV 26/Info Pack/index.html`, reprint command at its foot) with the broadcast-partner and live-stream lines removed. Nothing on the site links to it; it is reachable by URL only.
 - Page structure: hero + always-visible teaser highlights, then an **email-capture gate**. On
   submit it unlocks the full pack inline (packages / itinerary / safety / records / travel),
   reveals the live `comp-nov-aida` **$850** Stripe button, and offers the PDF download.

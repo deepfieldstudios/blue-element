@@ -47,8 +47,7 @@
       { t: 'Harry McCahill', s: 'Managing Director · UK · CNF #1', href: 'athlete-harry.html' },
       { t: 'Arron Walker', s: 'Depth · UK · to 90m', href: 'athlete-arron.html' },
       { t: 'Natalie Bruce', s: 'Pool & Depth · USA · World #7', href: 'athlete-natalie.html' },
-      { t: 'Kathleen Greubel', s: 'Depth · Germany · NR holder', href: 'athlete-kathleen.html' },
-      { t: 'Sponsor the Team', s: '2026 partnership prospectus', href: 'sponsorship.html' }
+      { t: 'Kathleen Greubel', s: 'Depth · Germany · NR holder', href: 'athlete-kathleen.html' }
     ]},
     { id: 'about', label: 'About', href: 'about.html', pages: ['about'], items: [
       { t: 'Our Story', s: 'Why Blue Element exists', href: 'about.html' },
@@ -114,7 +113,7 @@
       '<div class="footer-col"><h4>Freedive</h4>' +
         '<a href="courses.html">Courses</a><a href="training.html">Training</a><a href="camps.html">Private Coaching &amp; Camps</a><a href="enquire.html">Enquire</a><a href="about.html#platform">Platform &amp; Conditions</a></div>' +
       '<div class="footer-col"><h4>Competition</h4>' +
-        '<a href="competition.html">Annual Competition</a><a href="athletes.html">Athletes</a><a href="sponsorship.html">Sponsor the Team</a><a href="gallery.html">Gallery &amp; Media</a></div>' +
+        '<a href="competition.html">Annual Competition</a><a href="athletes.html">Athletes</a><a href="gallery.html">Gallery &amp; Media</a></div>' +
       '<div class="footer-col"><h4>Visit</h4>' +
         '<a href="dominica.html">Discover Dominica</a><a href="dominica.html#travel">Travel &amp; Logistics</a><a href="plan-your-trip.html">Plan Your Trip</a><a href="about.html">About Us</a><a href="mailto:' + MAIL + '">Book / Contact</a><a href="terms.html">Terms &amp; Refunds</a><a href="privacy.html">Privacy</a></div>' +
     '</div>' +
