@@ -48,6 +48,7 @@
   .ai-head{display:flex;gap:14px;align-items:baseline;margin-bottom:6px;}
   .ai-num{font-size:12px;font-weight:700;letter-spacing:.1em;color:var(--be-teal);}
   .ai-head h2{font-family:var(--be-font-display);font-stretch:var(--be-width-display);text-transform:uppercase;font-size:clamp(20px,2.4vw,24px);color:var(--be-ocean-blue);margin:0;line-height:1.1;}
+  .ai-opt{font-weight:500;color:var(--be-text-soft);font-size:.85em;}
   .ai-intro{margin:6px 0 4px 34px;font-size:14.5px;line-height:1.6;color:var(--be-text-soft);}
   .ai-row{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:20px;}
   .ai-row .ci-field{margin-top:0;}
@@ -416,7 +417,7 @@
           <!-- 05 Declarations -->
           <fieldset class="ai-sec">
             <div class="ai-head"><span class="ai-num">05</span><h2>Declarations</h2></div>
-            <p class="ai-intro">The AIDA liability release and image rights, the Diveye media release, and your in-water recompression choice. Read each one, tick or choose, then sign once at the bottom.</p>
+            <p class="ai-intro">The AIDA liability release and image rights, the Diveye media release (optional) and your in-water recompression choice. Read each one, tick or choose, then sign once at the bottom.</p>
 
             <div class="ai-doc">
               <h3>Liability release and assumption of risk</h3>
@@ -444,8 +445,8 @@
             </div>
 
             <div class="ai-doc">
-              <h3>Diveye media and appearance release</h3>
-              <p>Diveye films and live-streams the competition. This is their release, word for word. We send Diveye a copy with your name, signature and the date.</p>
+              <h3>Diveye media and appearance release <span class="ai-opt">(optional)</span></h3>
+              <p>Diveye films and live-streams the competition. This is their release, word for word. It's optional here: tick it now, or sign a paper copy at registration on Sun 8 November. If you tick it, we send Diveye a copy with your name, signature and the date.</p>
               <div class="ai-text" tabindex="0">
                 <p><b>Event:</b> Blue Element November 2026 · <b>Location:</b> Soufrière, Dominica · <b>Dates:</b> 8–17 November 2026</p>
                 <h4>1. Consent to Recording and Use of Likeness</h4>
@@ -492,7 +493,7 @@
             </div>
 
             <p class="ai-legend">Your signature</p>
-            <p class="ai-help">Applies to every declaration above.</p>
+            <p class="ai-help">Applies to every declaration you agree to above.</p>
             <div class="ai-sigs">
               <div class="ai-padbox"><label>Signature <button type="button" data-clear="sig_declarations">Clear</button></label><canvas class="ai-pad" data-pad="sig_declarations"></canvas><p class="ai-help">Sign with your finger or mouse.</p></div>
               <div>
