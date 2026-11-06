@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Live-stream headshot · Blue Element November 2026</title>
+<meta name="description" content="Upload a headshot for the Diveye live stream of Blue Element November 2026, Soufrière, Dominica." />
+<meta name="robots" content="noindex, nofollow" />
+<link rel="icon" href="/favicon.ico" sizes="any" />
+<link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon/favicon-32x32.png" />
+<link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon/favicon-16x16.png" />
+<link rel="apple-touch-icon" sizes="180x180" href="/assets/favicon/apple-touch-icon.png" />
+<link rel="manifest" href="/site.webmanifest" />
+<meta name="theme-color" content="#021b2e" />
+<link rel="canonical" href="https://blueelementstore.com/headshot.html" />
+<!-- Open Graph -->
+<meta property="og:type" content="website" />
+<meta property="og:site_name" content="Blue Element Freediving" />
+<meta property="og:title" content="Live-stream headshot · Blue Element November 2026" />
+<meta property="og:description" content="One photo of you for the live stream: shown next to your name when you're on the line." />
+<meta property="og:url" content="https://blueelementstore.com/headshot.html" />
+<meta property="og:image" content="https://blueelementstore.com/assets/media/comp/nov-hero.jpg" />
+<meta property="og:image:alt" content="Blue Element competition platform in Soufrière Bay, Dominica" />
+<!-- Twitter -->
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="Live-stream headshot · Blue Element November 2026" />
+<meta name="twitter:description" content="One photo of you for the live stream: shown next to your name when you're on the line." />
+<meta name="twitter:image" content="https://blueelementstore.com/assets/media/comp/nov-hero.jpg" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,400..800&amp;display=swap" />
+<link rel="stylesheet" href="site.css" />
+<style>
+  /* ---- Live-stream headshot (scoped, hs-). Same look as athlete-info.html; reuses the .ci-field controls from site.css. ---- */
+  .hs-hero .page-hero-media::after{background:linear-gradient(180deg,rgba(2,27,46,.55) 0%,rgba(2,27,46,.62) 55%,rgba(2,27,46,.85) 100%);}
+  .hs-hero .page-hero-media img{object-position:center 45%;}
+  .page-hero h1.hs-h1{font-size:clamp(28px,4.2vw,54px);line-height:1.06;max-width:none;margin-top:24px;}
+  .hs-wrap{max-width:640px;margin:0 auto;}
+  .hs-tips{background:#fff;border:1px solid var(--be-sky-100);border-radius:20px;padding:26px 30px;margin-bottom:22px;}
+  .hs-tips h2{font-size:12px;letter-spacing:.16em;text-transform:uppercase;color:var(--be-teal);margin:0 0 12px;}
+  .hs-tips ul{margin:0;padding-left:18px;color:var(--be-text-soft);font-size:15px;line-height:1.6;}
+  .hs-tips li{margin:4px 0;}
+  .hs-card{background:#fff;border:1px solid var(--be-sky-100);border-radius:20px;overflow:hidden;}
+  .hs-body{padding:34px 32px 36px;}
+  .hs-help{font-size:12.5px;line-height:1.5;color:var(--be-text-soft);margin:0;}
+  .ci-field.is-bad input,.hs-drop.is-bad{border-color:#9a2b2b !important;box-shadow:0 0 0 3px rgba(154,43,43,.12);}
+  .hs-label{display:block;font-size:11px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:var(--be-steel-navy);margin:22px 0 7px;}
+  .hs-drop{position:relative;display:flex;gap:16px;align-items:center;padding:16px;border:1.5px dashed var(--be-sky-100);border-radius:14px;background:var(--be-mist);min-width:0;}
+  .hs-drop.is-over{border-color:var(--be-teal);background:var(--be-sky-50);}
+  .hs-drop.has-file{border-style:solid;border-color:rgba(32,125,146,.5);background:rgba(42,147,168,.06);}
+  .hs-drop input{position:absolute;inset:0;opacity:0;cursor:pointer;width:100%;}
+  .hs-thumb{width:84px;height:84px;border-radius:12px;background:var(--be-ocean-blue);display:grid;place-items:center;flex:none;overflow:hidden;}
+  .hs-thumb svg{width:26px;height:26px;stroke:#fff;}
+  .hs-thumb img{width:100%;height:100%;object-fit:cover;display:block;}
+  .hs-drop .tx{min-width:0;font-size:14px;color:var(--be-text);}
+  .hs-drop .tx b{display:block;font-weight:600;}
+  .hs-drop .tx small{display:block;color:var(--be-text-soft);font-size:12.5px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;}
+  .hs-check{display:flex;gap:12px;align-items:flex-start;margin-top:22px;font-size:14.5px;line-height:1.55;color:var(--be-text);cursor:pointer;}
+  .hs-check input{width:20px;height:20px;flex:none;margin:1px 0 0;accent-color:var(--be-teal);}
+  .hs-check.is-bad{color:#9a2b2b;}
+  .hs-submit{margin-top:26px;width:100%;justify-content:center;}
+  .hs-submit:disabled{opacity:.6;cursor:default;}
+  .hs-progress{height:6px;border-radius:6px;background:var(--be-sky-50);margin-top:14px;overflow:hidden;}
+  .hs-progress[hidden]{display:none;}
+  .hs-progress i{display:block;height:100%;width:0;background:var(--be-teal);transition:width .2s;}
+  .hs-errors{margin:18px 0 0;padding:14px 16px;border-radius:12px;background:#fbefef;color:#9a2b2b;font-size:14px;line-height:1.5;}
+  .hs-errors[hidden]{display:none;}
+  .hs-errors ul{margin:6px 0 0;padding-left:18px;}
+  .hs-note{font-size:12.5px;color:var(--be-text-soft);text-align:center;margin:14px 0 0;}
+  .hs-hp{position:absolute;left:-9999px;width:1px;height:1px;overflow:hidden;}
+  .hs-done{display:none;padding:44px 32px;text-align:center;}
+  .hs-card.is-done form{display:none;}
+  .hs-card.is-done .hs-done{display:block;}
+  .hs-done img{width:120px;height:120px;border-radius:16px;object-fit:cover;display:block;margin:0 auto 6px;}
+  .hs-done img[hidden]{display:none;}
+  .hs-done h2{font-family:var(--be-font-display);font-stretch:var(--be-width-display);text-transform:uppercase;color:var(--be-ocean-blue);font-size:clamp(24px,3vw,30px);margin:8px 0 10px;}
+  .hs-done p{color:var(--be-text-soft);font-size:15px;line-height:1.6;margin:0 auto;max-width:46ch;}
+  @media(max-width:640px){
+    .hs-body{padding:28px 18px 30px;} .hs-tips{padding:22px 20px;}
+    .hs-thumb{width:68px;height:68px;}
+  }
+</style>
+</head>
+<body data-page="headshot">
+
+<!-- ============================== HERO ============================== -->
+<section class="page-hero hs-hero" data-screen-label="Headshot — Hero">
+  <div class="page-hero-media"><img src="assets/media/clean/platform-under.jpg" alt="The Blue Element competition platform seen from below, with sunlight and a school of fish" /></div>
+  <div class="page-hero-inner">
+    <div class="container">
+      <h1 class="reveal d1 hs-h1">Live-stream<br />headshot</h1>
+      <p class="ph-sub reveal d2">Upload one photo of yourself. Diveye shows it next to your name on the live stream when you're on the line.</p>
+      <div class="ph-meta reveal d3">
+        <div class="mi"><span class="v">8–17 Nov</span><span class="l">2026 · Soufrière, Dominica</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================== FORM ============================== -->
+<section class="section bg-light" data-screen-label="Headshot — Form">
+  <div class="container">
+    <div class="hs-wrap">
+
+      <div class="hs-tips">
+        <h2>A good overlay photo</h2>
+        <ul>
+          <li>Head and shoulders, looking at the camera.</li>
+          <li>Good light, and a plain background if you can.</li>
+          <li>No sunglasses, mask or hat.</li>
+          <li>A recent phone photo is fine: JPG, PNG or HEIC, up to 10 MB.</li>
+        </ul>
+      </div>
+
+      <div class="hs-card" id="hsCard">
+        <form id="hsForm" novalidate>
+          <input class="hs-hp" type="text" name="company" tabindex="-1" autocomplete="off" aria-hidden="true" />
+          <div class="hs-body">
+            <div class="ci-field">
+              <label for="hName">Full name</label>
+              <input id="hName" name="name" type="text" autocomplete="name" required />
+              <p class="hs-help">As it appears on the start list.</p>
+            </div>
+            <div class="ci-field">
+              <label for="hEmail">Email</label>
+              <input id="hEmail" name="email" type="email" autocomplete="email" inputmode="email" required />
+              <p class="hs-help">The one you used for the athlete info form, so we can match your photo to you.</p>
+            </div>
+
+            <span class="hs-label" id="hPhotoLabel">Your photo</span>
+            <div class="hs-drop" id="hDrop">
+              <input type="file" name="photo" id="hPhoto" accept="image/jpeg,image/png,image/webp,image/heic,image/heif,.jpg,.jpeg,.png,.webp,.heic,.heif" aria-labelledby="hPhotoLabel" />
+              <span class="hs-thumb" id="hThumb"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4 3.6-7 8-7s8 3 8 7"/></svg></span>
+              <span class="tx"><b id="hDropTitle">Choose a photo</b><small id="hDropSub">or drag it here</small></span>
+            </div>
+
+            <label class="hs-check" id="hAgreeWrap"><input type="checkbox" name="agree_headshot" value="yes" id="hAgree" /> I agree that Blue Element Freediving and Diveye may show this photo, with my name, on the live stream and in event graphics for the Blue Element November 2026 competition.</label>
+
+            <div class="hs-errors" id="hsErrors" role="alert" hidden></div>
+            <button class="btn btn-teal btn-lg hs-submit" type="submit" id="hsSubmit">Upload photo</button>
+            <div class="hs-progress" id="hsProgress" hidden><i></i></div>
+            <p class="hs-note">Goes privately to the Blue Element team and Diveye. Want to change it later? Upload again with the same email; the newest photo is the one we use. Questions? WhatsApp +44&nbsp;7554&nbsp;739347.</p>
+          </div>
+        </form>
+
+        <div class="hs-done" id="hsDone" aria-live="polite">
+          <img id="hsDoneImg" alt="Your uploaded photo" hidden />
+          <p class="eyebrow center">Received</p>
+          <h2>Thanks, you're on</h2>
+          <p>Your photo is with the Blue Element team for the Diveye live stream. To change it, open this page again and upload a new one with the same email.</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<script src="headshot.js"></script>
+<script src="chrome.js" defer></script>
+<script src="pages.js" defer></script>
+</body>
+</html>
