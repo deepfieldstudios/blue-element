@@ -259,8 +259,7 @@
 
     cur = 'declarations';
     need(el('agree_liability').checked, 'Tick to agree to the liability release.', el('agree_liability'));
-    need(el('agree_image').checked, 'Tick to agree to the AIDA image rights.', el('agree_image'));
-    need(el('agree_media').checked, 'Tick to agree to Blue Element filming.', el('agree_media'));
+    need(el('agree_image').checked, 'Tick to agree to the athlete media release.', el('agree_image'));
     need(el('iwr_choice').value === 'consent' || el('iwr_choice').value === 'decline', 'Choose whether you consent to in-water recompression.', form.querySelector('input[name=iwr_choice]'));
     need(!padBy.sig_declarations.isEmpty(), 'Your signature under the declarations.', padBy.sig_declarations.canvas);
     var norm = function (x) { return x.toLowerCase().replace(/\s+/g, ' '); };
