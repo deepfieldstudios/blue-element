@@ -265,15 +265,21 @@
     xhr.upload.onprogress = function (e) { if (e.lengthComputable) bar.style.width = Math.max(2, Math.round(e.loaded / e.total * 100)) + '%'; };
     xhr.onload = function () {
       var res = {}; try { res = JSON.parse(xhr.responseText); } catch (e) {}
-      if (xhr.status === 200 && res.ok) return done(res.ref, doctorStillNeeded);
+      if (xhr.status === 200 && res.ok) return done(res.ref, doctorStillNeeded, res.group);
       fail(res.error || 'Something went wrong on our side (' + xhr.status + ').');
     };
     xhr.onerror = function () { fail('The form didn’t go through. Check your connection and press Submit again.'); };
     xhr.send(fd);
   }
 
-  function done(ref, doctorStillNeeded) {
+  function done(ref, doctorStillNeeded, group) {
     document.getElementById('ndRef').textContent = 'Ref ' + ref;
+    // WhatsApp: the group invite comes from the Worker (not in the page source); the direct chat carries only the ref
+    var wa = document.getElementById('ndWa');
+    if (/^https:\/\/chat\.whatsapp\.com\/[A-Za-z0-9]+$/.test(group || '')) document.getElementById('ndWaGroup').href = group;
+    else document.getElementById('ndWaGroup').hidden = true;
+    document.getElementById('ndWaDirect').href = 'https://wa.me/447554739347?text=' + encodeURIComponent('Hi Blue Element! I\u2019ve just filled in the new diver form (ref ' + ref + ') and I\u2019d like to arrange my training.');
+    wa.hidden = false;
     document.getElementById('ndDoneDoctor').hidden = !doctorStillNeeded;
     card.classList.add('is-done');
     card.scrollIntoView({ block: 'start' });
