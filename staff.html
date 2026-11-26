@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+<title>Staff log · Blue Element</title>
+<meta name="description" content="Blue Element staff work log: hours, courses and event roles, with live pay." />
+<meta name="robots" content="noindex, nofollow" />
+<meta name="referrer" content="no-referrer" />
+<link rel="icon" href="/favicon.ico" sizes="any" />
+<link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon/favicon-32x32.png" />
+<link rel="apple-touch-icon" sizes="180x180" href="/assets/favicon/apple-touch-icon.png" />
+<meta name="theme-color" content="#033c62" />
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta name="apple-mobile-web-app-title" content="BE Staff" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,400..800&amp;display=swap" />
+<link rel="stylesheet" href="site.css" />
+<style>
+  /* ---- Staff log (scoped, sl-). Standalone app page: no site nav or footer. ---- */
+  body[data-page="staff"]{background:var(--be-mist);min-height:100vh;}
+  .sl{max-width:560px;margin:0 auto;padding:0 16px 48px;}
+  .sl-top{background:linear-gradient(180deg,rgba(2,27,46,.6) 0%,rgba(3,60,98,.84) 100%),url("assets/media/clean/comp-2026-under-boats.jpg") center 30%/cover no-repeat var(--be-deep);color:#fff;padding:calc(14px + env(safe-area-inset-top)) 0 0;}
+  .sl-top .sl{padding-bottom:0;}
+  .sl-brand{display:flex;align-items:center;justify-content:space-between;gap:12px;}
+  .sl-brand img{height:42px;width:auto;display:block;}
+  .sl-who{text-align:right;line-height:1.2;}
+  .sl-who b{display:block;font-size:15px;}
+  .sl-who small{font-size:12px;color:#b2cfd8;}
+  .sl-period{display:flex;align-items:center;justify-content:space-between;gap:8px;margin:16px 0 0;padding:10px 0 14px;border-top:1px solid rgba(178,207,216,.2);}
+  .sl-period button{width:38px;height:38px;border-radius:50%;border:1px solid rgba(178,207,216,.35);background:transparent;color:#fff;font:inherit;font-size:18px;cursor:pointer;flex:none;}
+  .sl-period button:disabled{opacity:.25;cursor:default;}
+  .sl-period div{text-align:center;}
+  .sl-period b{display:block;font-size:15px;letter-spacing:.01em;}
+  .sl-period small{font-size:12px;color:#b2cfd8;}
+  /* pay card */
+  .sl-pay{background:linear-gradient(160deg,#044f7d 0%,#033c62 60%,#021b2e 100%);color:#fff;border-radius:22px;padding:22px 20px 18px;margin-top:-1px;box-shadow:0 14px 30px -18px rgba(2,27,46,.6);}
+  .sl-pay-top{display:flex;justify-content:space-between;align-items:flex-start;gap:10px;}
+  .sl-pay .k{font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:#9fd3df;font-weight:700;}
+  .sl-pay .big{font-family:var(--be-font-display);font-size:44px;font-weight:800;letter-spacing:-.01em;line-height:1.05;margin-top:4px;}
+  .sl-chip{font-size:11.5px;font-weight:700;border-radius:999px;padding:5px 10px;background:rgba(255,255,255,.12);color:#fff;white-space:nowrap;}
+  .sl-chip.ok{background:#1d6b3a;}
+  .sl-chip.sent{background:#f5a524;color:#3a2600;}
+  .sl-bar{position:relative;height:10px;border-radius:10px;background:rgba(255,255,255,.14);margin:18px 0 8px;overflow:visible;}
+  .sl-bar i{position:absolute;left:0;top:0;bottom:0;border-radius:10px;background:#2fb8cf;transition:width .35s var(--be-ease-out);}
+  .sl-bar i.over{background:linear-gradient(90deg,#2fb8cf,#7be0a0);}
+  .sl-bar em{position:absolute;top:-5px;bottom:-5px;width:2px;background:#fff;border-radius:2px;}
+  .sl-bar em::after{content:"$500";position:absolute;top:-17px;left:50%;transform:translateX(-50%);font-size:10px;font-style:normal;font-weight:700;color:#cfe9ef;}
+  .sl-msg{font-size:13.5px;line-height:1.5;color:#d9edf2;margin:4px 0 0;}
+  .sl-break{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-top:16px;}
+  .sl-break div{background:rgba(255,255,255,.08);border-radius:12px;padding:10px 12px;}
+  .sl-break span{display:block;font-size:11px;color:#9fd3df;letter-spacing:.06em;text-transform:uppercase;font-weight:600;}
+  .sl-break b{display:block;font-size:17px;margin-top:2px;}
+  .sl-break small{font-size:11.5px;color:#b2cfd8;}
+  .sl-break .wide{grid-column:1 / -1;display:flex;justify-content:space-between;align-items:center;}
+  /* actions */
+  .sl-actions{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin:18px 0 0;}
+  .sl-actions.two{grid-template-columns:repeat(2,1fr);}
+  .sl-actions button{font:inherit;font-weight:700;font-size:14px;border:1.5px solid var(--be-sky-100);background:#fff;color:var(--be-ocean-blue);border-radius:14px;padding:14px 8px;cursor:pointer;display:flex;flex-direction:column;align-items:center;gap:6px;}
+  .sl-actions button svg{width:22px;height:22px;stroke:var(--be-teal);}
+  .sl-actions button[aria-pressed="true"]{border-color:var(--be-teal);background:var(--be-teal);color:#fff;}
+  .sl-actions button[aria-pressed="true"] svg{stroke:#fff;}
+  .sl-panel{background:#fff;border:1px solid var(--be-sky-100);border-radius:18px;padding:18px 16px 18px;margin-top:10px;}
+  .sl-panel[hidden]{display:none;}
+  .sl-panel h3{font-size:12px;letter-spacing:.16em;text-transform:uppercase;color:var(--be-teal);margin:0 0 4px;}
+  .sl-panel .ci-field{margin-top:14px;}
+  .sl-row{display:grid;grid-template-columns:1fr 1fr;gap:12px;}
+  .sl-row .ci-field{margin-top:14px;}
+  .sl-step{display:flex;align-items:center;border:1px solid var(--be-sky-100);border-radius:12px;overflow:hidden;background:#fff;}
+  .sl-step button{width:46px;height:48px;border:0;background:var(--be-mist);color:var(--be-ocean-blue);font:inherit;font-size:22px;font-weight:600;cursor:pointer;flex:none;}
+  .sl-step input{flex:1;min-width:0;border:0 !important;text-align:center;font:inherit;font-size:18px;font-weight:700;color:var(--be-ocean-blue);padding:0 !important;box-shadow:none !important;height:48px;background:#fff;}
+  .sl-step .u{font-size:13px;color:var(--be-text-soft);padding-right:6px;}
+  .sl-live{margin-top:14px;padding:12px 14px;border-radius:12px;background:var(--be-mist);font-size:14px;color:var(--be-text);display:flex;justify-content:space-between;gap:10px;align-items:baseline;}
+  .sl-live b{color:var(--be-ocean-blue);font-size:17px;white-space:nowrap;}
+  .sl-live small{display:block;font-size:12px;color:var(--be-text-soft);}
+  .sl-days{display:flex;flex-wrap:wrap;gap:6px;margin-top:8px;}
+  .sl-days label{position:relative;cursor:pointer;}
+  .sl-days input{position:absolute;opacity:0;width:1px;height:1px;}
+  .sl-days span{display:block;font-size:13px;font-weight:600;border:1px solid var(--be-sky-100);border-radius:10px;padding:8px 10px;color:var(--be-text-soft);background:#fff;text-align:center;min-width:58px;}
+  .sl-days span small{display:block;font-size:10.5px;font-weight:500;}
+  .sl-days input:checked + span{background:var(--be-ocean-blue);border-color:var(--be-ocean-blue);color:#fff;}
+  .sl-days input:disabled + span{opacity:.35;cursor:default;}
+  .sl-days input:focus-visible + span{outline:2px solid var(--be-teal);outline-offset:2px;}
+  .sl-link{font:inherit;font-size:13px;font-weight:600;color:var(--be-teal);background:none;border:0;padding:0;margin-top:8px;cursor:pointer;text-decoration:underline;}
+  .sl-save{width:100%;justify-content:center;margin-top:16px;}
+  .sl-err{margin-top:12px;padding:10px 12px;border-radius:10px;background:#fbefef;color:#9a2b2b;font-size:13.5px;}
+  .sl-err[hidden],.sl-toast[hidden]{display:none;}
+  .sl-toast{margin-top:12px;padding:10px 12px;border-radius:10px;background:#e7f4ec;color:#1d6b3a;font-size:13.5px;}
+  /* log */
+  .sl-h{display:flex;justify-content:space-between;align-items:baseline;margin:26px 2px 8px;}
+  .sl-h h2{font-family:var(--be-font-display);font-stretch:var(--be-width-display);text-transform:uppercase;font-size:18px;color:var(--be-ocean-blue);margin:0;}
+  .sl-h small{font-size:12.5px;color:var(--be-text-soft);}
+  .sl-list{display:flex;flex-direction:column;gap:8px;}
+  .sl-item{display:grid;grid-template-columns:40px 1fr auto;gap:12px;align-items:center;background:#fff;border:1px solid var(--be-sky-100);border-radius:14px;padding:12px 12px 12px 12px;}
+  .sl-ic{width:40px;height:40px;border-radius:12px;display:grid;place-items:center;background:var(--be-sky-50);}
+  .sl-ic svg{width:20px;height:20px;stroke:var(--be-ocean-blue);}
+  .sl-ic.course{background:#fff3df;}.sl-ic.course svg{stroke:#8a5200;}
+  .sl-ic.event{background:#e7f4ec;}.sl-ic.event svg{stroke:#1d6b3a;}
+  .sl-item b{display:block;font-size:14.5px;color:var(--be-text);}
+  .sl-item small{display:block;font-size:12.5px;color:var(--be-text-soft);line-height:1.45;}
+  .sl-amt{text-align:right;}
+  .sl-amt b{color:var(--be-ocean-blue);font-size:15px;}
+  .sl-amt small{font-size:11px;}
+  .sl-amt button{font:inherit;font-size:12px;color:#9a2b2b;background:none;border:0;padding:4px 0 0;cursor:pointer;}
+  .sl-empty{text-align:center;color:var(--be-text-soft);font-size:14px;padding:22px 10px;border:1.5px dashed var(--be-sky-100);border-radius:14px;}
+  .sl-send{margin-top:18px;background:#fff;border:1px solid var(--be-sky-100);border-radius:18px;padding:16px;}
+  .sl-send p{margin:0 0 10px;font-size:13.5px;line-height:1.5;color:var(--be-text-soft);}
+  .sl-send button{width:100%;justify-content:center;}
+  .sl-rules{margin-top:22px;font-size:12.5px;line-height:1.6;color:var(--be-text-soft);text-align:center;}
+  .sl-gate{max-width:420px;margin:80px auto;padding:0 20px;text-align:center;color:var(--be-text-soft);}
+  .sl-gate h1{font-family:var(--be-font-display);font-stretch:var(--be-width-display);text-transform:uppercase;color:var(--be-ocean-blue);font-size:26px;}
+  .sl-load{text-align:center;padding:40px 0;color:var(--be-text-soft);}
+  [hidden]{display:none !important;}
+</style>
+</head>
+<body data-page="staff">
+
+<div id="slGate" class="sl-gate" hidden>
+  <img src="assets/logo/be_logo_darkblue.png" alt="Blue Element" style="height:54px;width:auto" />
+  <h1>Staff log</h1>
+  <p id="slGateMsg">Open this page from your personal staff link. Ask Harry if you don't have it.</p>
+</div>
+
+<div id="slApp" hidden>
+  <div class="sl-top">
+    <div class="sl">
+      <div class="sl-brand">
+        <img src="assets/logo/be_logo_white.png" alt="Blue Element" />
+        <div class="sl-who"><b id="slName"></b><small id="slRole"></small></div>
+      </div>
+      <div class="sl-period">
+        <button type="button" id="slPrev" aria-label="Previous pay period">‹</button>
+        <div><b id="slPeriod"></b><small id="slPayday"></small></div>
+        <button type="button" id="slNext" aria-label="Next pay period">›</button>
+      </div>
+    </div>
+  </div>
+
+  <main class="sl">
+    <section class="sl-pay" aria-live="polite">
+      <div class="sl-pay-top">
+        <div><span class="k" id="slPayK">Your pay so far</span><div class="big" id="slTotal">$0</div></div>
+        <span class="sl-chip" id="slStatus"></span>
+      </div>
+      <div class="sl-bar" id="slBar"><i></i><em></em></div>
+      <p class="sl-msg" id="slMsg"></p>
+      <div class="sl-break" id="slBreak"></div>
+    </section>
+
+    <div id="slEdit">
+      <div class="sl-actions" id="slActions" role="group" aria-label="Log work">
+        <button type="button" data-tab="hours" aria-pressed="false"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>Hours</button>
+        <button type="button" data-tab="course" aria-pressed="false"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 8l9-4 9 4-9 4-9-4z"/><path d="M7 10v5c0 1.5 2.5 3 5 3s5-1.5 5-3v-5"/></svg>Course</button>
+        <button type="button" data-tab="event" aria-pressed="false"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M8 21h8M12 17v4M7 4h10v5a5 5 0 0 1-10 0V4z"/><path d="M17 5h3v2a3 3 0 0 1-3 3M7 5H4v2a3 3 0 0 0 3 3"/></svg>Event</button>
+      </div>
+
+      <!-- hours -->
+      <form class="sl-panel" id="fHours" data-panel="hours" hidden novalidate>
+        <h3>Log a day's hours</h3>
+        <div class="ci-field"><label for="hDate">Date</label><input id="hDate" name="date" type="date" /></div>
+        <div class="sl-row">
+          <div class="ci-field"><label>On land</label><div class="sl-step" data-step="land"><button type="button" data-d="-0.5" aria-label="Less on-land time">−</button><input name="land" inputmode="decimal" value="0" aria-label="Hours on land" /><span class="u">h</span><button type="button" data-d="0.5" aria-label="More on-land time">+</button></div></div>
+          <div class="ci-field"><label>In the water</label><div class="sl-step" data-step="water"><button type="button" data-d="-0.5" aria-label="Less in-water time">−</button><input name="water" inputmode="decimal" value="0" aria-label="Hours in the water" /><span class="u">h</span><button type="button" data-d="0.5" aria-label="More in-water time">+</button></div></div>
+        </div>
+        <div class="ci-field"><label for="hNote">What you did <span class="ci-opt">Optional</span></label><input id="hNote" name="note" type="text" placeholder="e.g. safety for AIDA 2, rig maintenance" /></div>
+        <div class="sl-live"><span>This day<small id="hRates"></small></span><b id="hLive">$0</b></div>
+        <div class="sl-err" hidden></div>
+        <button class="btn btn-teal btn-lg sl-save" type="submit">Save hours</button>
+      </form>
+
+      <!-- course -->
+      <form class="sl-panel" data-panel="course" id="fCourse" hidden novalidate>
+        <h3>Log a course you taught</h3>
+        <div class="ci-field"><label for="cCourse">Course</label><select id="cCourse" name="course"></select></div>
+        <div class="ci-field" id="cNameBox" hidden><label for="cName">Course name</label><input id="cName" name="name" type="text" /></div>
+        <div class="sl-row">
+          <div class="ci-field"><label for="cStart">Started</label><input id="cStart" name="start" type="date" /></div>
+          <div class="ci-field"><label for="cEnd">Finished</label><input id="cEnd" name="end" type="date" /></div>
+        </div>
+        <div class="sl-row">
+          <div class="ci-field"><label>Students</label><div class="sl-step" data-step="students"><button type="button" data-d="-1" aria-label="Fewer students">−</button><input name="students" inputmode="numeric" value="1" aria-label="Number of students" /><button type="button" data-d="1" aria-label="More students">+</button></div></div>
+          <div class="ci-field"><label for="cFee">Paid per student $</label><input id="cFee" name="fee" type="number" min="0" step="1" inputmode="decimal" /></div>
+        </div>
+        <div class="ci-field"><label for="cNames">Student names <span class="ci-opt">Optional</span></label><input id="cNames" name="studentNames" type="text" placeholder="So Harry can match the bookings" /></div>
+        <div class="sl-live"><span>Your commission<small id="cHow">50% of the fee</small></span><b id="cLive">$0</b></div>
+        <div class="sl-err" hidden></div>
+        <button class="btn btn-teal btn-lg sl-save" type="submit">Save course</button>
+      </form>
+
+      <!-- event -->
+      <form class="sl-panel" data-panel="event" id="fEvent" hidden novalidate>
+        <h3>Log an event you worked</h3>
+        <div class="ci-field"><label for="eEvent">Event</label><select id="eEvent" name="event"></select></div>
+        <div class="ci-field"><label for="eRole">Your role</label><select id="eRole" name="role"></select></div>
+        <div class="ci-field" id="eRoleNameBox" hidden><label for="eRoleName">Role name</label><input id="eRoleName" name="roleName" type="text" /></div>
+        <div class="ci-field"><label>Days you worked</label><div class="sl-days" id="eDays"></div><button type="button" class="sl-link" id="eAll">Select every day</button></div>
+        <div class="ci-field"><label for="eNote">Note <span class="ci-opt">Optional</span></label><input id="eNote" name="note" type="text" /></div>
+        <div class="sl-live"><span>Event pay<small id="eHow">Paid on top of your $500 minimum</small></span><b id="eLive">—</b></div>
+        <div class="sl-err" hidden></div>
+        <button class="btn btn-teal btn-lg sl-save" type="submit">Save event</button>
+      </form>
+      <div class="sl-toast" id="slToast" hidden></div>
+    </div>
+
+    <div class="sl-h"><h2>This period</h2><small id="slCount"></small></div>
+    <div class="sl-list" id="slList"></div>
+
+    <div class="sl-send" id="slSend">
+      <p id="slSendMsg"></p>
+      <button class="btn btn-teal btn-lg" type="button" id="slSendBtn">Send my log to Harry</button>
+    </div>
+
+    <p class="sl-rules" id="slRules"></p>
+  </main>
+</div>
+<div class="sl-load" id="slLoad">Loading…</div>
+
+<script src="staff.js?v=20261126"></script>
+</body>
+</html>
