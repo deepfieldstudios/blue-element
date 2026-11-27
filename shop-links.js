@@ -34,7 +34,9 @@ window.STRIPE_LINKS = {
     var id = el.getAttribute('data-buy');
     var url = links[id];
     if (url) {
-      el.setAttribute('href', url);
+      // Tells the be-new-diver Worker which product was bought, so course, training, camp and
+      // coaching buyers are emailed the new diver forms (27 Nov 2026). Keep ids [a-z0-9-].
+      el.setAttribute('href', url + (url.indexOf('?') < 0 ? '?' : '&') + 'client_reference_id=' + encodeURIComponent(id));
       el.setAttribute('rel', 'noopener');
       el.classList.remove('is-enquire');
     } else if (el.getAttribute('data-fallback')) {
